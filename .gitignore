@@ -1,0 +1,14 @@
+.DS_Store
+/node_modules
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
+!/content/tutorial/04-advanced-sveltekit/06-environment-variables/**/.env
+.apps
+.vercel
+/content/tutorial/common/.svelte-kit
+/content/tutorial/common/node_modules
+/test-results

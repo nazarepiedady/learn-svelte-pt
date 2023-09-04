@@ -1,0 +1,57 @@
+@import '@fontsource/roboto-mono';
+
+/* TODO move all this to site-kit */
+
+body {
+	/* --font-mono: Menlo, Monaco, 'Courier New', monospace; */
+	--font-mono: 'Roboto Mono', monospace;
+	--h4: 1.6rem;
+
+	--light-blue: #f4f8fb;
+}
+
+input,
+button {
+	border: 2px solid transparent;
+}
+
+input:focus-visible,
+button:focus-visible {
+	outline: none;
+	border: 2px solid var(--flash);
+}
+
+/* this is duplicated with kit.svelte.dev */
+pre.language-diff code {
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.language-diff .inserted,
+.language-diff .deleted {
+	position: relative;
+}
+
+.language-diff .inserted {
+	color: hsl(120, 100%, 25%);
+}
+
+.language-diff .deleted {
+	color: hsl(2, 80%, 47%);
+	user-select: none;
+}
+
+.language-diff .inserted::before,
+.language-diff .deleted::before {
+	position: absolute;
+	left: -1rem;
+	top: -0.2rem;
+	font-size: 1.2rem;
+}
+
+.language-diff .inserted::before {
+	content: '+';
+}
+
+.language-diff .deleted::before {
+	content: '-';
+}
