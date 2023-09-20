@@ -7,7 +7,8 @@ const config = {
 		adapter: adapter({ runtime: 'edge' }),
 
 		prerender: {
-			concurrency: 4
+			concurrency: 4,
+			handleMissingId: 'ignore'
 		},
 
 		version: {
