@@ -33,7 +33,7 @@
 		<a
 			class="prev-button"
 			href={current.prev ? `/tutorial/${current.prev.slug}` : undefined}
-			aria-label={current.prev && 'Previous'}
+			aria-label={current.prev && 'Anterior'}
 		>
 			<Icon name="arrow-left" size={16} />
 		</a>
@@ -70,7 +70,7 @@
 
 			{#if is_open}
 				<nav
-					aria-label="tutorial exercises"
+					aria-label="exercícios do seminário"
 					transition:slide={{ axis: 'y', easing: expoOut, duration: $reduced_motion ? 0 : 400 }}
 				>
 					<div class="exercises">
@@ -90,7 +90,7 @@
 											}
 										}}
 									>
-										Part {i + 1}: {part.title}
+										Parte {i + 1}: {part.title}
 									</button>
 
 									{#if part.slug === expanded_part}
@@ -145,7 +145,7 @@
 		<a
 			class="next-button"
 			href={current.next ? `/tutorial/${current.next.slug}` : undefined}
-			aria-label="Next"
+			aria-label="Próximo"
 		>
 			<Icon name="arrow-right" size={16} />
 		</a>
