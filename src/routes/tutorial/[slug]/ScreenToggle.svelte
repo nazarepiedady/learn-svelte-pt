@@ -16,9 +16,9 @@
 				pressed = false;
 				dispatch('change', { pressed });
 			}
-		}}>Tutorial</button
+		}}>Seminário</button
 	>
-	<ToggleButton label="Show editor" {pressed} on:change />
+	<ToggleButton label="Mostrar o editor" {pressed} on:change />
 	<button
 		aria-hidden="true"
 		on:click={() => {
