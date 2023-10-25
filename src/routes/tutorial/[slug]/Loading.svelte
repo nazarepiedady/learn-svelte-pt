@@ -22,55 +22,50 @@
 	{#if error}
 		<div class="error">
 			<div>
-				<h2>Yikes!</h2>
+				<h2>Nada bom!</h2>
 				{#if error.message === 'Your browser does not support all necessary features'}
 					<p>
-						This app requires modern web platform features. Please use a browser other than Safari.
+						Esta aplicação exige funcionalidades da plataforma da Web moderna. Use um outro navegador que não seja Safari.
 					</p>
 				{:else if /firefox/i.test(navigator.userAgent)}
 					<p>
-						We couldn't start the app. Please ensure
+						Nós não pudemos iniciar a aplicação. Certifique-se
 						<a
 							target="_blank"
 							rel="noreferrer"
 							href="https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection"
 						>
-							third party cookies
-						</a> are enabled for this site, and disable Enhanced Tracking Protection.
+							que os cookies de terceiros
+						</a>estão ativados para esta aplicação, e desative a Proteção de Rastreio Melhorada.
 					</p>
 					<p>
-						If you have 'Delete cookies and site data when Firefox is closed' enabled in
-						<code>about:preferences#privacy</code>, make sure <code>learn.svelte.dev</code> is included
-						as an exception.
+						Se tiveres 'Eliminar os cookies e dados da aplicação quando o Firefox for fechado' ativado na <code>about:preferences#privacy</code>, certifique-se que <code>learn.svelte.dev</code> está incluída como uma exceção.
 					</p>
 				{:else if /chrome/i.test(navigator.userAgent) && !/edg/i.test(navigator.userAgent)}
 					<p>
-						We couldn't start the app. Please ensure third party cookies are enabled for this site —
-						click the
+						Nós não pudemos iniciar a aplicação. Certifique-se de que os cookies de terceiros estão ativados para está aplicação — clique no
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
 							style="width: 1em; height: 1em; position: relative; top: 0.1em; margin: 0 0.2em; transform: scale(1.2)"
 						>
-							<title>eye</title>
+							<title>olho</title>
 							<path
 								fill="#666"
 								d="M11.83,9L15,12.16C15,12.11 15,12.05 15,12A3,3 0 0,0 12,9C11.94,9 11.89,9 11.83,9M7.53,9.8L9.08,11.35C9.03,11.56 9,11.77 9,12A3,3 0 0,0 12,15C12.22,15 12.44,14.97 12.65,14.92L14.2,16.47C13.53,16.8 12.79,17 12,17A5,5 0 0,1 7,12C7,11.21 7.2,10.47 7.53,9.8M2,4.27L4.28,6.55L4.73,7C3.08,8.3 1.78,10 1,12C2.73,16.39 7,19.5 12,19.5C13.55,19.5 15.03,19.2 16.38,18.66L16.81,19.08L19.73,22L21,20.73L3.27,3M12,7A5,5 0 0,1 17,12C17,12.64 16.87,13.26 16.64,13.82L19.57,16.75C21.07,15.5 22.27,13.86 23,12C21.27,7.61 17,4.5 12,4.5C10.6,4.5 9.26,4.75 8,5.2L10.17,7.35C10.74,7.13 11.35,7 12,7Z"
 							/>
 						</svg>
-						icon in the URL bar or go to
-						<code>chrome://settings/cookies</code> and add <code>learn.svelte.dev</code> to 'Sites that
-						can always use cookies'.
+						ícone na barra de URL ou siga para <code>chrome://settings/cookies</code> e adicione <code>learn.svelte.dev</code> aos 'Sítios que sempre podem usar cookies'.
 					</p>
 				{:else}
 					<p>
-						We couldn't start the app. Please ensure third party cookies are enabled for this site.
+						Nós não pudemos iniciar a aplicação. Certifique-se de que os cookies de terceiros estão ativados para esta aplicação.
 					</p>
 				{/if}
 
 				{#if is_svelte}
-					<a href="https://svelte.dev/tutorial/{$page.data.exercise.slug}">
-						Go to the legacy svelte tutorial instead <Icon name="arrow-right" />
+					<a href="https://svelte-docs-pt.vercel.app/tutorial/{$page.data.exercise.slug}">
+						Siga para o antigo seminário interativo da svelte <Icon name="arrow-right" />
 					</a>
 				{/if}
 			</div>
