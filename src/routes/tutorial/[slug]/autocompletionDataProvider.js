@@ -104,50 +104,50 @@ export const svelteEvents = [
 	...globalEvents,
 	{
 		name: 'on:introstart',
-		description: 'Available when element has transition'
+		description: 'Disponível quando o elemento tem `transition`'
 	},
 	{
 		name: 'on:introend',
-		description: 'Available when element has transition'
+		description: 'Disponível quando o elemento tem `transition`'
 	},
 	{
 		name: 'on:outrostart',
-		description: 'Available when element has transition'
+		description: 'Disponível quando o elemento tem `transition`'
 	},
 	{
 		name: 'on:outroend',
-		description: 'Available when element has transition'
+		description: 'Disponível quando o elemento tem `transition`'
 	}
 ];
 
 export const svelteAttributes = [
 	{
 		name: 'bind:innerHTML',
-		description: 'Available when contenteditable=true'
+		description: 'Disponível quando contenteditable=true'
 	},
 	{
 		name: 'bind:textContent',
-		description: 'Available when contenteditable=true'
+		description: 'Disponível quando contenteditable=true'
 	},
 	{
 		name: 'bind:innerText',
-		description: 'Available when contenteditable=true'
+		description: 'Disponível quando contenteditable=true'
 	},
 	{
 		name: 'bind:clientWidth',
-		description: 'Available for block level elements. (read-only)'
+		description: 'Disponível para os elementos de nível de bloco. (apenas-leitura)'
 	},
 	{
 		name: 'bind:clientHeight',
-		description: 'Available for block level elements. (read-only)'
+		description: 'Disponível para os elementos de nível de bloco. (apenas-leitura)'
 	},
 	{
 		name: 'bind:offsetWidth',
-		description: 'Available for block level elements. (read-only)'
+		description: 'Disponível para os elementos de nível de bloco. (apenas-leitura)'
 	},
 	{
 		name: 'bind:offsetHeight',
-		description: 'Available for block level elements. (read-only)'
+		description: 'Disponível para os elementos de nível de bloco. (apenas-leitura)'
 	},
 	{
 		name: 'bind:this',
@@ -160,20 +160,20 @@ export const sveltekitAttributes = [
 	{
 		name: 'data-sveltekit-keepfocus',
 		description:
-			'SvelteKit-specific attribute. Currently focused element will retain focus after navigation. Otherwise, focus will be reset to the body.',
+			'Atributo específico da SvelteKit. O elemento focado atualmente manterá o foco depois da navegação. De outro modo, o foco será reiniciado ao corpo.',
 		valueSet: 'v',
 		values: [{ name: 'off' }]
 	},
 	{
 		name: 'data-sveltekit-noscroll',
-		description: 'SvelteKit-specific attribute. Will prevent scrolling after the link is clicked.',
+		description: 'Atributo específico da Svelte. Impedirá o deslocamento depois da ligação ser clicada.',
 		valueSet: 'v',
 		values: [{ name: 'off' }]
 	},
 	{
 		name: 'data-sveltekit-preload-code',
 		description:
-			"SvelteKit-specific attribute. Will cause SvelteKit to run the page's load function as soon as the user hovers over the link (on a desktop) or touches it (on mobile), rather than waiting for the click event to trigger navigation.",
+			"Atributo específico da SvelteKit. Fará a SvelteKit executar a função de carregamento da página logo que o utilizador pairar o ponteiro sobre a ligação (no computador) ou tocá-lo (no telemóvel), no lugar de aguardar pelo evento de clique para acionar a navegação.",
 		valueSet: 'v',
 		values: [
 			{ name: 'eager' },
@@ -186,21 +186,21 @@ export const sveltekitAttributes = [
 	{
 		name: 'data-sveltekit-preload-data',
 		description:
-			"SvelteKit-specific attribute. Will cause SvelteKit to run the page's load function as soon as the user hovers over the link (on a desktop) or touches it (on mobile), rather than waiting for the click event to trigger navigation.",
+			"Atributo específico da SvelteKit. Fará a SvelteKit executar a função de carregamento da página logo que o utilizador pairar o ponteiro sobre a ligação (no computador) ou tocá-lo (no telemóvel), no lugar de aguardar pelo evento de clique para acionar a navegação.",
 		valueSet: 'v',
 		values: [{ name: 'hover' }, { name: 'tap' }, { name: 'off' }]
 	},
 	{
 		name: 'data-sveltekit-reload',
 		description:
-			'SvelteKit-specific attribute. Will cause SvelteKit to do a normal browser navigation which results in a full page reload.',
+			'Atributo específico da SvelteKit. Levará a SvelteKit à fazer uma navegação de navegador normal, o que resulta num carregamento de página completo.',
 		valueSet: 'v',
 		values: [{ name: 'off' }]
 	},
 	{
 		name: 'data-sveltekit-replacestate',
 		description:
-			'SvelteKit-specific attribute. Will replace the current `history` entry rather than creating a new one with `pushState` when the link is clicked.',
+			'Atributo específico da SvelteKit. Substituirá a entrada da `history` atual ao invés de criar uma nova com a `pushState` quando a ligação for clicada.',
 		valueSet: 'v',
 		values: [{ name: 'off' }]
 	}
@@ -210,65 +210,65 @@ export const svelteTags = [
 	{
 		name: 'svelte:self',
 		description:
-			'Allows a component to include itself, recursively.\n\nIt cannot appear at the top level of your markup; it must be inside an if or each block to prevent an infinite loop.',
+			'Permite um componente incluir-se a si mesmo, recursivamente.\n\nNão pode aparecer no alto nível da nossa marcação; deve estar dentro dum bloco `if` ou `each` para evitar um laço de repetição infinito.',
 		attributes: []
 	},
 	{
 		name: 'svelte:component',
 		description:
-			'Renders a component dynamically, using the component constructor specified as the this property. When the property changes, the component is destroyed and recreated.\n\nIf this is falsy, no component is rendered.',
+			'Interpreta um componente dinamicamente, usando o construtor de componente especificado como esta propriedade. Quando a propriedade mudar, o componente é destruído e recriado.\n\nSe esta for falsa, nenhum componente é interpretado.',
 		attributes: [
 			{
 				name: 'this',
 				description:
-					'Component to render.\n\nWhen this property changes, the component is destroyed and recreated.\nIf this is falsy, no component is rendered.'
+					'Componente à interpretar.\n\nQuando esta propriedade mudar, o componente é destruído e recriado.\nSe esta for falsa, nenhum componente é interpretado.'
 			}
 		]
 	},
 	{
 		name: 'svelte:element',
 		description:
-			'Renders a DOM element dynamically, using the string as the this property. When the property changes, the element is destroyed and recreated.\n\nIf this is falsy, no element is rendered.',
+			'Interpreta um elemento de DOM dinamicamente, usando a sequência de caracteres como esta propriedade. Quando a propriedade mudar, o elemento é destruído e recriado.\n\nSe esta for falsa, nenhum elemento é interpretado.',
 		attributes: [
 			{
 				name: 'this',
 				description:
-					'DOM element to render.\n\nWhen this property changes, the element is destroyed and recreated.\nIf this is falsy, no element is rendered.'
+					'Elemento de DOM à interpretar.\n\nQuando esta propriedade mudar, o elemento é destruído e recriado.\nSe esta for falsa, nenhum elemento é interpretado.'
 			}
 		]
 	},
 	{
 		name: 'svelte:window',
 		description:
-			'Allows you to add event listeners to the window object without worrying about removing them when the component is destroyed, or checking for the existence of window when server-side rendering.',
+			'Permite-nos adicionar ouvintes de evento ao objeto `window` sem a preocupação com a remoção dos mesmos quando o componente for destruído, ou verificação pela existência do `window` quando interpretar do lado do servidor.',
 		attributes: [
 			{
 				name: 'bind:innerWidth',
-				description: 'Bind to the inner width of the window. (read-only)'
+				description: 'Vincula à largura interna da janela. (apenas-leitura)'
 			},
 			{
 				name: 'bind:innerHeight',
-				description: 'Bind to the inner height of the window. (read-only)'
+				description: 'Vincula à altura interna da janela. (apenas-leitura)'
 			},
 			{
 				name: 'bind:outerWidth',
-				description: 'Bind to the outer width of the window. (read-only)'
+				description: 'Vincula à largura externa da janela. (apenas-leitura)'
 			},
 			{
 				name: 'bind:outerHeight',
-				description: 'Bind to the outer height of the window. (read-only)'
+				description: 'Vincula à altura externa da janela. (apenas-leitura)'
 			},
 			{
 				name: 'bind:scrollX',
-				description: 'Bind to the scroll x position of the window.'
+				description: 'Vincula à posição x do deslocamento da janela.'
 			},
 			{
 				name: 'bind:scrollY',
-				description: 'Bind to the scroll y position of the window.'
+				description: 'Vincula à posição y do deslocamento da janela.'
 			},
 			{
 				name: 'bind:online',
-				description: 'An alias for window.navigator.onLine'
+				description: 'Um pseudónimo para `window.navigator.onLine`'
 			},
 			// window events
 			{ name: 'on:afterprint' },
@@ -294,7 +294,7 @@ export const svelteTags = [
 	{
 		name: 'svelte:document',
 		description:
-			"As with <svelte:window>, this element allows you to add listeners to events on document, such as visibilitychange, which don't fire on window.",
+			"Tal como acontece com `<svelte:window>`, este elemento permite-nos adicionar ouvintes aos eventos sobre o documento, tais como `visibilitychange`, que não dispara sobre a janela.",
 		attributes: [
 			// document events
 			{ name: 'on:fullscreenchange' },
@@ -308,81 +308,81 @@ export const svelteTags = [
 	{
 		name: 'svelte:body',
 		description:
-			"As with <svelte:window>, this element allows you to add listeners to events on document.body, such as mouseenter and mouseleave which don't fire on window.",
+			"Tal como acontece com `<svelte:window>`, este elemento permite-nos adicionar ouvintes aos eventos sobre o corpo do documento, tais como `mouseenter` e `mouseleave` que não disparam sobre a janela.",
 		attributes: []
 	},
 	{
 		name: 'svelte:head',
 		description:
-			'This element makes it possible to insert elements into document.head. During server-side rendering, head content exposed separately to the main html content.',
+			'Este elemento torna possível inserir elementos no cabeçalho do documento. Durante a interpretação do lado do servidor, o conteúdo do cabeçalho é exposto separadamente ao conteúdo da marcação de hipertexto principal.',
 		attributes: []
 	},
 	{
 		name: 'svelte:options',
-		description: 'Provides a place to specify per-component compiler options',
+		description: 'Fornece um lugar para especificar opções de compilador por componente.',
 		attributes: [
 			{
 				name: 'immutable',
 				description:
-					'If true, tells the compiler that you promise not to mutate any objects. This allows it to be less conservative about checking whether values have changed.',
+					'Se for verdadeiro, diz ao compilador que prometemos não modificar quaisquer objetos. Isto permite-o ser menos conservador sobre a verificação caso os valores forem mudados.',
 				values: [
 					{
 						name: '{true}',
 						description:
-							'You never use mutable data, so the compiler can do simple referential equality checks to determine if values have changed'
+							'Nós nunca usamos dados mutáveis, assim o compilador pode fazer verificações de igualdade referencial simples para determinar se os valores forem mudados.'
 					},
 					{
 						name: '{false}',
 						description:
-							'The default. Svelte will be more conservative about whether or not mutable objects have changed'
+							'O padrão. A Svelte será mais conservadora sobre se os objetos mutáveis foram ou não mudados.'
 					}
 				]
 			},
 			{
 				name: 'accessors',
 				description:
-					"If true, getters and setters will be created for the component's props. If false, they will only be created for readonly exported values (i.e. those declared with const, class and function). If compiling with customElement: true this option defaults to true.",
+					"Se for verdadeiro, os recuperadores e definidores serão criados para as propriedades do componente. Se for falso, apenas serão criados para os valores exportados somente para leitura (isto é, aqueles declarados com `const`, `class`, e `function`). Se compilarmos com `customElement: true` esta opção predefine para verdadeiro.",
 				values: [
 					{
 						name: '{true}',
-						description: "Adds getters and setters for the component's props"
+						description: "Adiciona recuperadores e definidores para as propriedades do componente."
 					},
 					{
 						name: '{false}',
-						description: 'The default.'
+						description: 'O padrão.'
 					}
 				]
 			},
 			{
 				name: 'namespace',
-				description: 'The namespace where this component will be used, most commonly "svg"'
+				description: 'O espaço de nome onde este componente será usado, mais comummente "svg".'
 			},
 			{
 				name: 'tag',
-				description: 'The name to use when compiling this component as a custom element'
+				description: 'O nome à usar quando compilamos este componente como um elemento personalizado.'
 			}
 		]
 	},
 	{
 		name: 'svelte:fragment',
 		description:
-			'This element is useful if you want to assign a component to a named slot without creating a wrapper DOM element.',
+			'Este elemento é útil caso quisermos atribuir um componente à uma ranhura nomeada sem a criação dum elemento de DOM embrulhador.',
 		attributes: [
 			{
 				name: 'slot',
-				description: 'The name of the named slot that should be targeted.'
+				description: 'O nome da ranhura nomeada que deve ser escolhida como alvo.'
 			}
 		]
 	},
 	{
 		name: 'slot',
 		description:
-			'Components can have child content, in the same way that elements can.\n\nThe content is exposed in the child component using the <slot> element, which can contain fallback content that is rendered if no children are provided.',
+			'Os componentes podem ter conteúdo filho, da mesma maneira que os elementos podem.\n\nO conteúdo é exposto no componente filho usando o elemento `<slot>`, o qual pode conter conteúdo de retrocesso que é interpretado se nenhum filho for fornecido.',
 		attributes: [
 			{
 				name: 'name',
 				description:
-					'Named slots allow consumers to target specific areas. They can also have fallback content.'
+					'As ranhuras nomeadas permitem os consumidores escolherem como alvo áreas específicas. Eles também podem ter conteúdo de retrocesso.'
 			}
 		]
 	}
@@ -391,42 +391,42 @@ export const svelteTags = [
 const mediaAttributes = [
 	{
 		name: 'bind:duration',
-		description: 'The total duration of the video, in seconds. (readonly)'
+		description: 'A duração total do vídeo, em segundos. (apenas leitura)'
 	},
 	{
 		name: 'bind:buffered',
-		description: 'An array of {start, end} objects. (readonly)'
+		description: 'Um vetor de objetos `{start, end}`. (apenas leitura)'
 	},
 	{
 		name: 'bind:seekable',
-		description: 'An array of {start, end} objects. (readonly)'
+		description: 'Um vetor de objetos `{start, end}`. (apenas leitura)'
 	},
 	{
 		name: 'bind:played',
-		description: 'An array of {start, end} objects. (readonly)'
+		description: 'Um vetor de objetos `{start, end}`. (apenas leitura)'
 	},
 	{
 		name: 'bind:seeking',
-		description: 'boolean. (readonly)'
+		description: 'booleano. (apenas leitura)'
 	},
 	{
 		name: 'bind:ended',
-		description: 'boolean. (readonly)'
+		description: 'booleano. (apenas leitura)'
 	},
 	{
 		name: 'bind:currentTime',
-		description: 'The current point in the video, in seconds.'
+		description: 'O ponto atual no vídeo, em segundos.'
 	},
 	{
 		name: 'bind:playbackRate',
-		description: "how fast or slow to play the video, where 1 is 'normal'"
+		description: "Quão rápido ou lento reproduzir o vídeo, onde 1 é 'normal'."
 	},
 	{
 		name: 'bind:paused'
 	},
 	{
 		name: 'bind:volume',
-		description: 'A value between 0 and 1'
+		description: 'Um valor entre 0 e 1.'
 	},
 	{
 		name: 'bind:muted'
@@ -439,17 +439,17 @@ const mediaAttributes = [
 const videoAttributes = [
 	{
 		name: 'bind:videoWidth',
-		description: 'readonly'
+		description: 'apenas leitura'
 	},
 	{
 		name: 'bind:videoHeight',
-		description: 'readonly'
+		description: 'apenas leitura'
 	}
 ];
 
 const indeterminateAttribute = {
 	name: 'indeterminate',
-	description: 'Available for type="checkbox"'
+	description: 'Disponível para `type="checkbox"`'
 };
 
 /** @type {Record<string, { name: string, description?: string }[]>} */
@@ -457,9 +457,9 @@ export const addAttributes = {
 	select: [{ name: 'bind:value' }],
 	input: [
 		{ name: 'bind:value' },
-		{ name: 'bind:group', description: 'Available for type="radio" and type="checkbox"' },
-		{ name: 'bind:checked', description: 'Available for type="checkbox"' },
-		{ name: 'bind:files', description: 'Available for type="file" (readonly)' },
+		{ name: 'bind:group', description: 'Disponível para `type="radio"` e `type="checkbox"`.' },
+		{ name: 'bind:checked', description: 'Disponível para `type="checkbox"`.' },
+		{ name: 'bind:files', description: 'Disponível para `type="file"` (apenas leitura).' },
 		indeterminateAttribute,
 		{ ...indeterminateAttribute, name: 'bind:indeterminate' }
 	],
