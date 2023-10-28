@@ -28,9 +28,9 @@
 		</svelte:fragment>
 
 		<svelte:fragment slot="external-links">
-			<a href="https://svelte.dev">Svelte</a>
+			<a href="https://svelte-docs-pt.vercel.app">Svelte</a>
 
-			<a href="https://kit.svelte.dev">SvelteKit</a>
+			<a href="https://sveltekit-docs-pt.vercel.app/">SvelteKit</a>
 
 			<Separator />
 
@@ -39,7 +39,7 @@
 				<span class="large"><Icon name="discord" /></span>
 			</a>
 
-			<a href="https://github.com/sveltejs/learn.svelte.dev" title="GitHub Repo">
+			<a href="https://github.com/nazarepiedady/learn-svelte-pt" title="Repositório da GitHub">
 				<span class="small">GitHub</span>
 				<span class="large"><Icon name="github" /></span>
 			</a>
