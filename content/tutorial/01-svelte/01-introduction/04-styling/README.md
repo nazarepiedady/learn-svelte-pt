@@ -1,8 +1,8 @@
 ---
-title: Styling
+title: Estilização
 ---
 
-Just like in HTML, you can add a `<style>` tag to your component. Let's add some styles to the `<p>` element:
+Tal como na HTML, podemos adicionar um marcador `<style>` ao nosso componente. Vamos adicionar alguns estilos ao elemento `<p>`:
 
 ```svelte
 /// file: App.svelte
@@ -17,4 +17,4 @@ Just like in HTML, you can add a `<style>` tag to your component. Let's add some
 </style>
 ```
 
-Importantly, these rules are _scoped to the component_. You won't accidentally change the style of `<p>` elements elsewhere in your app, as we'll see in the next step.
+Com importância, estas regras estão _isoladas ao componente_. Nós não mudaremos acidentalmente o estilo dos elementos `<p>` noutro lado na nossa aplicação, conforme veremos na próxima etapa.
