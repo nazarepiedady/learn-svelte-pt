@@ -1,16 +1,16 @@
 ---
-title: HTML tags
+title: Marcadores de HTML
 ---
 
-Ordinarily, strings are inserted as plain text, meaning that characters like `<` and `>` have no special meaning.
+Habitualmente, as sequências de caracteres são inseridas como texto simples, o que significa que caracteres como `<` e `>` não têm nenhum significado.
 
-But sometimes you need to render HTML directly into a component. For example, the words you're reading right now exist in a markdown file that gets included on this page as a blob of HTML.
+Mas algumas vezes precisamos desenhar HTML diretamente num componente. Por exemplo, as palavras que lês neste momento existem num ficheiro de Markdown que é incluído nesta página como uma bolha (ou *blob*) de HTML.
 
-In Svelte, you do this with the special `{@html ...}` tag:
+Na Svelte, podemos fazer isto com o marcador especial `{@html ...}`:
 
 ```svelte
 /// file: App.svelte
 <p>{+++@html+++ string}</p>
 ```
 
-> **Warning!** Svelte doesn't perform any sanitization of the expression inside `{@html ...}` before it gets inserted into the DOM. This isn't an issue if the content is something you trust like an article you wrote yourself. However if it's some untrusted user content, e.g. a comment on an article, then it's critical that you manually escape it, otherwise you risk exposing your users to <a href="https://owasp.org/www-community/attacks/xss/" target="_blank">Cross-Site Scripting</a> (XSS) attacks.
+> **Aviso!**, a Svelte não realiza nenhuma higienização da expressão dentro do `{@html ...}` antes deste ser inserido no DOM. Isto não é um problema se o conteúdo é algo que confiamos como um artigo que nós mesmos escrevemos. No entanto, se for algum conteúdo duvidoso do utilizador, por exemplo um comentário sobre um artigo, então é critico que o escapemos manualmente, de outro modo arriscamos-nos a expor os nossos utilizadores aos ataques de <a href="https://owasp.org/www-community/attacks/xss/" target="_blank">programação entre aplicação</a> (ou XSS).
