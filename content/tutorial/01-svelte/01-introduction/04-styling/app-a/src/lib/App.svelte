@@ -1,5 +1,5 @@
 <p>This is a paragraph.</p>
 
 <style>
-	/* Write your CSS here */
+	/* Escrever a nossa CSS neste bloco */
 </style>
