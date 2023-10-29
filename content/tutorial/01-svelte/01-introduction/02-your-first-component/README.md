@@ -1,14 +1,14 @@
 ---
-title: Your first component
+title: O Nosso Primeiro Componente
 ---
 
-In Svelte, an application is composed from one or more _components_. A component is a reusable self-contained block of code that encapsulates HTML, CSS and JavaScript that belong together, written into a `.svelte` file. The `App.svelte` file, open in the code editor to the right, is a simple component.
+Na Svelte, uma aplicação é composta de um ou mais _componentes_. Um componente é um bloco de código autossuficiente e reutilizável que encapsula HTML, CSS e JavaScript que estão associados, escrito num ficheiro `.svelte`. O ficheiro `App.svelte`, aberto no editor de código à direita, é um componente simples.
 
-## Adding data
+## Adicionado Dados
 
-A component that just renders some static markup isn't very interesting. Let's add some data.
+Um componente que apenas desenha alguma marcação estática não é muito interessante. Vamos adicionar algum dado.
 
-First, add a script tag to your component and declare a `name` variable:
+Primeiro, adicionamos um marcador `script` ao nosso componente e declaramos uma variável `name`:
 
 ```svelte
 /// file: App.svelte
@@ -19,14 +19,14 @@ First, add a script tag to your component and declare a `name` variable:
 <h1>Hello world!</h1>
 ```
 
-Then, we can refer to `name` in the markup:
+Depois, podemos fazer referência à `name` na marcação:
 
 ```svelte
 /// file: App.svelte
 <h1>Hello +++{name}+++!</h1>
 ```
 
-Inside the curly braces, we can put any JavaScript we want. Try changing `name` to `name.toUpperCase()` for a shoutier greeting.
+Dentro das chavetas, podemos colocar qualquer JavaScript que quisermos. Tente mudar `name` para `name.toUpperCase()` para uma saudação mais barulhenta:
 
 ```svelte
 /// file: App.svelte
