@@ -1,30 +1,30 @@
 ---
-title: Welcome to Svelte
+title: Bem-vindo à Svelte
 ---
 
-Welcome to the Svelte tutorial! This will teach you everything you need to know to easily build web applications of all sizes, with high performance and a small footprint.
+Bem-vindo ao seminário da Svelte! Este nos ensinará tudo que o precisamos de saber para construir facilmente aplicações da Web de todos os tamanhos, com alto desempenho e uma pegada pequena.
 
-You can also consult the [API docs](https://svelte.dev/docs) and the [examples](https://svelte.dev/examples), or — if you're impatient to start hacking on your machine locally — create a project with `npm init svelte`.
+Nós também podemos consultar a [documentação da API](https://svelte-docs-pt.vercel.app/docs) e os [exemplos](https://svelte-docs-pt.vercel.app/examples), ou — se estivermos impacientes para começar trabalhar sobre a nossa máquina localmente — podemos criar um projeto com `npm init svelte`.
 
-## What is Svelte?
+## O Que é Svelte?
 
-Svelte is a tool for building web applications. Like other user interface frameworks, it allows you to build your app _declaratively_ out of components that combine markup, styles and behaviours.
+A Svelte é uma ferramenta para construção de aplicações da Web. Tal como outras abstrações de interface de utilizador, permite-nos construir a nossa aplicação _de maneira declarativa_ a partir de componentes que combinam marcação, estilos e comportamentos. 
 
-These components are _compiled_ into small, efficient JavaScript modules that eliminate overhead traditionally associated with UI frameworks.
+Estes componentes são _compilados_ em pequenos módulos eficientes de JavaScript que eliminam os custos tradicionalmente associados com as abstrações de interface de utilizador.
 
-You can build your entire app with Svelte (for example, using an application framework like [SvelteKit](https://kit.svelte.dev), which this tutorial will cover), or you can add it incrementally to an existing codebase. You can also ship components as standalone packages that work anywhere.
+Nós podemos construir a nossa aplicação inteira com a Svelte (por exemplo, usando uma abstração de aplicação como a [SvelteKit](https://sveltekit-docs-pt.vercell.app), que este seminário cobrirá), ou podemos adicioná-la incrementalmente à uma base de código existente. Nós também podemos entregar componentes como pacotes autónomos que funcionam em qualquer parte.
 
-## How to use this tutorial
+## Como Usar este Seminário
 
-> You'll need to have basic familiarity with HTML, CSS and JavaScript to understand Svelte.
+> Nós precisaremos ter familiaridade básica com o HTML, CSS e JavaScript para entender a Svelte.
 
-This tutorial is split into four main parts:
+Este seminário é separado em quatro partes principais:
 
-- [Basic Svelte](/tutorial/welcome-to-svelte) (you are here)
-- [Advanced Svelte](/tutorial/tweens)
-- [Basic SvelteKit](/tutorial/introducing-sveltekit)
-- [Advanced SvelteKit](/tutorial/optional-params)
+- [Svelte Básica](/tutorial/welcome-to-svelte) (eis onde estamos)
+- [Svelte Avançada](/tutorial/tweens)
+- [SvelteKit Básica](/tutorial/introducing-sveltekit)
+- [SvelteKit Avançada](/tutorial/optional-params)
 
-Each section will present an exercise designed to illustrate a feature. Later exercises build on the knowledge gained in earlier ones, so it's recommended that you go from start to finish. If necessary, you can navigate via the menu above.
+Cada seção apresentará um exercício concebido para ilustrar uma funcionalidade. Os exercícios posteriores baseiam-se sobre o conhecimento adquirido nos exercícios anteriores, então é recomendado que sigamos do início ao fim. Se necessário, podemos navegar através do menu acima.
 
-If you get stuck, you can click the `solve` button <span class="desktop">to the left of the editor</span><span class="mobile">in the top right of the editor view</span>. (<span class="mobile">Use the toggle below to switch between tutorial and editor views. </span>The `solve` button is disabled on sections like this one that don't include an exercise.) Try not to rely on it too much; you will learn faster by figuring out where to put each suggested code block and manually typing it in to the editor.
+Se ficarmos presos, podemos clicar no botão `resolver` <span class="desktop">à esquerda do editor</span><span class="mobile">no canto superior direito da visão do editor</span>. (<span class="mobile"> Usamos o interruptor abaixo para alternar entre as visões do seminário e editor. </span>O botão `resolver` está desativado nas seções como esta que não incluem um exercício.) Tente não depender muito dele; aprenderemos mais rápido compreendendo onde colocar cada bloco de código sugerido e digitando-o manualmente no editor.
