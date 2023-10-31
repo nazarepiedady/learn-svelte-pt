@@ -1,10 +1,10 @@
 ---
-title: Assignments
+title: Atribuições
 ---
 
-At the heart of Svelte is a powerful system of _reactivity_ for keeping the DOM in sync with your application state — for example, in response to an event.
+No coração da Svelte está um poderoso sistema de _reatividade_ para manter o DOM em sincronia com o estado da nossa aplicação — por exemplo, em resposta à um evento.
 
-To demonstrate it, we first need to wire up an event handler (we'll learn more about these [later](/tutorial/dom-events)):
+Para demonstrá-lo, primeiro precisamos de prender um manipulador de evento (aprenderemos mais sobre estes [mais tarde](/tutorial/dom-events)):
 
 ```svelte
 /// file: App.svelte
@@ -14,7 +14,7 @@ To demonstrate it, we first need to wire up an event handler (we'll learn more a
 </button>
 ```
 
-Inside the `increment` function, all we need to do is change the value of `count`:
+Dentro da função `increment`, tudo o que precisamos de fazer é mudar o valor da `count`:
 
 ```js
 /// file: App.svelte
@@ -23,4 +23,4 @@ function increment() {
 }
 ```
 
-Svelte 'instruments' this assignment with some code that tells it the DOM will need to be updated.
+A Svelte 'instrumentaliza' esta atribuição com algum código que diz ao DOM que precisará de ser atualizado.
