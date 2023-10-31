@@ -2,7 +2,7 @@
 	let count = 0;
 
 	function increment() {
-		// event handler code goes here
+		// escrever o código do manipulador de evento
 	}
 </script>
 
