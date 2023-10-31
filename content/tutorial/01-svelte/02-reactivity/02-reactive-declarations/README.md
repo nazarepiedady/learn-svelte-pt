@@ -1,10 +1,10 @@
 ---
-title: Declarations
+title: Declarações
 ---
 
-Svelte automatically updates the DOM when your component's state changes. Often, some parts of a component's state need to be computed from _other_ parts (such as a `fullname` derived from a `firstname` and a `lastname`), and recomputed whenever they change.
+A Svelte atualiza automaticamente o DOM quando estado do nosso componente mudar. Frequentemente, algumas partes do estado dum componente precisam ser computados a partir de _outras_ partes (tais como uma `fullname` derivada duma `firstname` e uma `lastname`), e computada novamente sempre que mudarem.
 
-For these, we have _reactive declarations_. They look like this:
+Para estas, temos as _declarações reativas_. Elas parecem-se com isto:
 
 ```js
 /// file: App.svelte
@@ -12,11 +12,11 @@ let count = 0;
 +++$: doubled = count * 2;+++
 ```
 
-If a reactive statement consists entirely of an assignment to an undeclared variable, Svelte will inject a `let` declaration on your behalf.
+Se uma declaração reativa consistir inteiramente duma atribuição à uma variável não declarada, a Svelte injetará uma declaração `let` em nosso nome.
 
-> Don't worry if this looks a little alien. It's [valid](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label) (if unconventional) JavaScript, which Svelte interprets to mean 're-run this code whenever any of the referenced values change'. Once you get used to it, there's no going back.
+> Não precisamos de preocupar-nos se isto parece um pouco estranho. É JavaScript [válido](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label) (se for pouco convencional), que a Svelte interpreta para querer dizer 'executar novamente este código sempre que qualquer um dos valores referenciados mudar'. Uma vez que estivermos habituados, não existe como voltar atrás.
 
-Let's use `doubled` in our markup:
+Vamos usar `doubled` na nossa marcação:
 
 ```svelte
 /// file: App.svelte
@@ -25,6 +25,6 @@ Let's use `doubled` in our markup:
 +++<p>{count} doubled is {doubled}</p>+++
 ```
 
-Of course, you could just write `{count * 2}` in the markup instead — you don't have to use reactive values. Reactive values become particularly valuable (no pun intended) when you need to reference them multiple times, or you have values that depend on _other_ reactive values.
+É claro que, poderíamos apenas escrever `{count * 2}` na marcação — não precisamos de usar valores reativos. Os valores reativos tornam-se particularmente valiosos (sem trocadilhos intencionados) quando precisamos de referenciá-los várias vezes, ou quando temos valores que dependem de _outros_ valores reativos.
 
-> Note that reactive declarations and statements will run after other script code and before component markup is rendered.
+> Nota que as declarações e tomadas de posições reativas executarão depois dos outros código do programa e antes da marcação do componente ser interpretada.
