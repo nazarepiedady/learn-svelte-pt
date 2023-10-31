@@ -1,8 +1,8 @@
 ---
-title: Statements
+title: Tomadas de Posições
 ---
 
-We're not limited to declaring reactive _values_ — we can also run arbitrary _statements_ reactively. For example, we can log the value of `count` whenever it changes:
+Nós não estamos limitados à declarar _valores_ reativos — também podemos executar de maneira reativa _tomadas de posições_ arbitrárias. Por exemplo, podemos registar o valor da `count` sempre que esta mudar:
 
 ```js
 /// file: App.svelte
@@ -11,7 +11,7 @@ let count = 0;
 +++$: console.log(`the count is ${count}`);+++
 ```
 
-You can easily group statements together with a block:
+Nós podemos agrupar facilmente as tomadas de posições com um bloco:
 
 ```js
 /// file: App.svelte
@@ -21,7 +21,7 @@ $: +++{+++
 +++}+++
 ```
 
-You can even put the `$:` in front of things like `if` blocks:
+Nós até podemos colocar o `$:` na frente de coisas como blocos de `if`:
 
 ```js
 /// file: App.svelte
