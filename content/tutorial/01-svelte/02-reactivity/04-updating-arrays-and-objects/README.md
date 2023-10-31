@@ -1,10 +1,10 @@
 ---
-title: Updating arrays and objects
+title: Atualização de Vetores e Objetos
 ---
 
-Because Svelte's reactivity is triggered by assignments, using array methods like `push` and `splice` won't automatically cause updates. For example, clicking the 'Add a number' button doesn't currently do anything, even though we're calling `numbers.push(...)` inside `addNumber`.
+Uma vez que a reatividade da Svelte é acionada por atribuições, usar métodos de vetor tais como `push` e `splice` não causará automaticamente atualizações. Por exemplo, o clique sobre o botão 'Add a number' atualmente não faz nada, apesar de estarmos a chamar `numbers.push(...)` dentro da função `addNumber`.
 
-One way to fix that is to add an assignment that would otherwise be redundant:
+Uma maneira de corrigir isto é adicionar uma atribuição que de outro modo seria redundante:
 
 ```js
 /// file: App.svelte
@@ -14,7 +14,7 @@ function addNumber() {
 }
 ```
 
-But there's a more idiomatic solution:
+Porém existe uma solução mais idiomática:
 
 ```js
 /// file: App.svelte
@@ -23,9 +23,9 @@ function addNumber() {
 }
 ```
 
-You can use similar patterns to replace `pop`, `shift`, `unshift` and `splice`.
+Nós podemos usar padrões semelhantes para substituir `pop`, `shift`, `unshift` e `splice`.
 
-Assignments to _properties_ of arrays and objects — e.g. `obj.foo += 1` or `array[i] = x` — work the same way as assignments to the values themselves.
+As atribuições às _propriedades_ dos vetores e objetos — por exemplo, `obj.foo += 1` ou `array[i] = x` — funcionam em si mesmas da mesma maneira que as atribuições aos valores:
 
 ```js
 /// file: App.svelte
@@ -34,7 +34,7 @@ function addNumber() {
 }
 ```
 
-A simple rule of thumb: the name of the updated variable must appear on the left hand side of the assignment. For example this...
+Uma simples regra de ouro: o nome da variável atualizada deve aparecer à esquerda da atribuição. Por exemplo isto...
 
 ```js
 /// no-file
@@ -42,4 +42,4 @@ const foo = obj.foo;
 foo.bar = 'baz';
 ```
 
-...won't trigger reactivity on `obj.foo.bar`, unless you follow it up with `obj = obj`.
+...não acionará a reatividade sobre a `obj.foo.bar`, a menos que a sigamos de perto com `obj = obj`.
