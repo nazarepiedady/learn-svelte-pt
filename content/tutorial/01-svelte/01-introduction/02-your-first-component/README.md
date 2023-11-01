@@ -4,7 +4,7 @@ title: O Nosso Primeiro Componente
 
 Na Svelte, uma aplicação é composta de um ou mais _componentes_. Um componente é um bloco de código autossuficiente e reutilizável que encapsula HTML, CSS e JavaScript que estão associados, escrito num ficheiro `.svelte`. O ficheiro `App.svelte`, aberto no editor de código à direita, é um componente simples.
 
-## Adicionado Dados
+## Adicionando Dados
 
 Um componente que apenas desenha alguma marcação estática não é muito interessante. Vamos adicionar algum dado.
 
