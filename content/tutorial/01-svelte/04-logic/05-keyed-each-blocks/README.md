@@ -1,14 +1,14 @@
 ---
-title: Keyed each blocks
+title: Blocos de each com chave
 ---
 
-By default, when you modify the value of an `each` block, it will add and remove items at the _end_ of the block, and update any values that have changed. That might not be what you want.
+Por padrão, quando modificamos o valor dum bloco de `each`, este adicionará e removerá itens no _final_ do bloco, e atualizará quaisquer valores que mudaram. Isto pode não ser o que queremos.
 
-It's easier to show why than to explain. Click the 'Remove first thing' button a few times, and notice what happens: it does not remove the first `<Thing>` component, but rather the _last_ DOM node. Then it updates the `name` value in the remaining DOM nodes, but not the emoji, which is fixed when each `<Thing>` is created.
+É mais fácil mostrar o porquê do que explicar. Clique sobre o botão 'Remove first thing' algumas vezes, e repara no que acontece: este não remove o primeiro componente `<Thing>`, porém o _último_ nó do DOM. Depois atualiza o valor da `name` nos nós restantes do DOM, mas não o emoji, o que é corrigido quando cada `<Thing>` for criado.
 
-Instead, we'd like to remove only the first `<Thing>` component and its DOM node, and leave the others unaffected.
+No lugar deste comportamento, gostaríamos de apenas remover o primeiro componente `<Thing>` e o seu nó do DOM, e deixar os outros inalterados.
 
-To do that, we specify a unique identifier (or "key") for the `each` block:
+Para fazer isto, especificamos um identificador único (ou "chave") para o bloco de `each`:
 
 ```svelte
 /// file: App.svelte
@@ -17,6 +17,6 @@ To do that, we specify a unique identifier (or "key") for the `each` block:
 {/each}
 ```
 
-Here, `(thing.id)` is the _key_, which tells Svelte how to figure out which DOM node to change when the component updates.
+Neste exemplo, `(thing.id)` é a _chave_, que diz à Svelte como descobrir qual nó do DOM mudar quando o componente atualizar-se.
 
-> You can use any object as the key, as Svelte uses a `Map` internally — in other words you could do `(thing)` instead of `(thing.id)`. Using a string or number is generally safer, however, since it means identity persists without referential equality, for example when updating with fresh data from an API server.
+> Nós podemos usar qualquer objeto como chave, uma vez que a Svelte usa um `Map` internamente — em outras palavras poderíamos fazer `(thing)` ao invés de `(thing.id)`. Usar uma sequência de caracteres ou número é geralmente mais seguro, no entanto, uma vez que significa que a identidade persiste sem a igualdade referencial, por exemplo quando atualizamos com dados frescos a partir dum servidor de API.
