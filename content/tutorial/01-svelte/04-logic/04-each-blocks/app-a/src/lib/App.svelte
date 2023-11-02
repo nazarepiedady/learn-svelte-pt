@@ -27,7 +27,7 @@
 		on:click={() => selected = 'yellow'}
 	></button>
 
-	<!-- TODO add the rest of the colours -->
+	<!-- TODO adicionar o resto das cores -->
 	<button></button>
 	<button></button>
 	<button></button>

@@ -1,10 +1,10 @@
 ---
-title: Each blocks
+title: Blocos de each
 ---
 
-When building user interfaces you'll often find yourself working with lists of data. In this exercise, we've repeated the `<button>` markup multiple times — changing the colour each time — but there's still more to add.
+Quando construímos interfaces muitas vezes nos encontramos a trabalhar com listas de dados. Neste exercício, repetimos a marcação do `<button>` várias vezes — mudando a cor todas as vezes — mas ainda existe mais por adicionar.
 
-Instead of laboriously copying, pasting and editing, we can get rid of all but the first button, then use an `each` block:
+No lugar de laboriosamente copiar, colar e editar, podemos desfazer-nos de tudo exceto o primeiro botão, e depois usar um bloco `each`:
 
 ```svelte
 /// file: App.svelte
@@ -20,9 +20,9 @@ Instead of laboriously copying, pasting and editing, we can get rid of all but t
 </div>
 ```
 
-> The expression (`colors`, in this case) can be any array or array-like object (i.e. it has a `length` property). You can loop over generic iterables with `each [...iterable]`.
+> A expressão (`colors`, neste caso) pode ser qualquer vetor ou objeto parecido com um vetor (isto é, que tem uma propriedade `length`). Nós podemos iterar sobre iteráveis genéricos com `each [...iterable]`.
 
-Now we need to use the `color` variable in place of `"red"`:
+Nós precisamos usar a variável `color` no lugar do `"red"`:
 
 ```svelte
 /// file: App.svelte
@@ -38,7 +38,7 @@ Now we need to use the `color` variable in place of `"red"`:
 </div>
 ```
 
-You can get the current _index_ as a second argument, like so:
+Nós podemos obter o _índice_ atual como um segundo argumento, desta maneira:
 
 ```svelte
 /// file: App.svelte
