@@ -19,4 +19,4 @@ Para fazer isto, especificamos um identificador único (ou "chave") para o bloco
 
 Neste exemplo, `(thing.id)` é a _chave_, que diz à Svelte como descobrir qual nó do DOM mudar quando o componente atualizar-se.
 
-> Nós podemos usar qualquer objeto como chave, uma vez que a Svelte usa um `Map` internamente — em outras palavras poderíamos fazer `(thing)` ao invés de `(thing.id)`. Usar uma sequência de caracteres ou número é geralmente mais seguro, no entanto, uma vez que significa que a identidade persiste sem a igualdade referencial, por exemplo quando atualizamos com dados frescos a partir dum servidor de API.
+> Nós podemos usar qualquer objeto como chave, uma vez que a Svelte usa um `Map` internamente — em outras palavras poderíamos fazer `(thing)` ao invés de `(thing.id)`. No entanto, usar uma sequência de caracteres ou número é geralmente mais seguro, uma vez que significa que a identidade persiste sem a igualdade referencial, por exemplo quando atualizamos com dados frescos a partir dum servidor de API.
