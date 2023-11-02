@@ -1,10 +1,10 @@
 ---
-title: If blocks
+title: Blocos de if
 ---
 
-HTML doesn't have a way of expressing _logic_, like conditionals and loops. Svelte does.
+A HTML não tem uma maneira de expressar _lógica_, como condicionais e laços de repetições. A Svelte tem.
 
-To conditionally render some markup, we wrap it in an `if` block. Let's add some text that appears when `count` is greater than `10`:
+Para interpretar condicionalmente alguma marcação, a envolvemos num bloco de `if`. Vamos adicionar algum texto que aparece quando `count` for maior do que `10`:
 
 ```svelte
 /// file: App.svelte
@@ -18,4 +18,4 @@ To conditionally render some markup, we wrap it in an `if` block. Let's add some
 {/if}+++
 ```
 
-Try it — update the component, and click on the button.
+Experimente — atualize o componente, e clique sobre o botão.
