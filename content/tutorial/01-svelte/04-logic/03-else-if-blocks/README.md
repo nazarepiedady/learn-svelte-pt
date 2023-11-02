@@ -1,8 +1,8 @@
 ---
-title: Else-if blocks
+title: Blocos de else-if
 ---
 
-Multiple conditions can be 'chained' together with `else if`:
+Várias condições podem ser 'encadeadas' juntas com o `else if`:
 
 ```svelte
 /// file: App.svelte
