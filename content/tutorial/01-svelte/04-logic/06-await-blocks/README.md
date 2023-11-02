@@ -1,8 +1,8 @@
 ---
-title: Await blocks
+title: Blocos de await
 ---
 
-Most web applications have to deal with asynchronous data at some point. Svelte makes it easy to _await_ the value of [promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) directly in your markup:
+A maioria das aplicações da Web precisam lidar com dados assíncronos nalgum momento. A Svelte torna fácil _esperar_ o valor das [promessas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) diretamente na nossa marcação:
 
 ```svelte
 /// file: App.svelte
@@ -15,9 +15,9 @@ Most web applications have to deal with asynchronous data at some point. Svelte 
 {/await}+++
 ```
 
-> Only the most recent `promise` is considered, meaning you don't need to worry about race conditions.
+> Apenas a `promise` mais recente é considerada, querendo dizer que não precisamos preocupar-nos com a condição de corrida.
 
-If you know that your promise can't reject, you can omit the `catch` block. You can also omit the first block if you don't want to show anything until the promise resolves:
+Se sabemos que a nossa promessa não pode ser rejeitada, podemos omitir o bloco de `catch`. Nós também podemos omitir o primeiro bloco se não quisermos mostrar nada até a promessa ser resolvida:
 
 ```svelte
 /// no-file

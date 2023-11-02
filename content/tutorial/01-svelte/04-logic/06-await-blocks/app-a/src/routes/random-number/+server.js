@@ -5,10 +5,10 @@ export async function GET(req) {
 	min = +min;
 	max = +max;
 
-	// simulate a long delay
+	// simular um longo atraso
 	await new Promise((res) => setTimeout(res, 1000));
 
-	// fail sometimes
+	// falhar algumas vezes
 	if (Math.random() < 0.333) {
 		return new Response(`Failed to generate random number. Please try again`, {
 			status: 400,
