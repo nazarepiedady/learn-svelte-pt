@@ -1,8 +1,8 @@
 ---
-title: Inline handlers
+title: Manipuladores Em Linha
 ---
 
-You can also declare event handlers inline:
+Nós também podemos declarar manipuladores de evento em linha:
 
 ```svelte
 /// file: App.svelte
@@ -24,4 +24,4 @@ You can also declare event handlers inline:
 </div>
 ```
 
-> In some frameworks you may see recommendations to avoid inline event handlers for performance reasons, particularly inside loops. That advice doesn't apply to Svelte — the compiler will always do the right thing, whichever form you choose.
+> Em algumas abstrações podemos ver recomendações para evitar manipuladores de evento em linha por motivos de desempenho, especialmente dentro dos laços de repetições. Este conselho não aplica-se à Svelte — o compilador sempre fará a coisa certa, seja qual for a forma que escolhermos.
