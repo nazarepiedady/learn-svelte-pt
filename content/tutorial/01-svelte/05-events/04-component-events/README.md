@@ -1,8 +1,8 @@
 ---
-title: Component events
+title: Eventos do Componente
 ---
 
-Components can also dispatch events. To do so, they must create an event dispatcher. Update `Inner.svelte`:
+Os componentes também podem despachar eventos. Para o fazer, estes devem criar um despachador de evento. Atualizamos o `Inner.svelte`:
 
 ```svelte
 /// file: Inner.svelte
@@ -19,13 +19,13 @@ Components can also dispatch events. To do so, they must create an event dispatc
 </script>
 ```
 
-> `createEventDispatcher` must be called when the component is first instantiated — you can't do it later inside e.g. a `setTimeout` callback. This links `dispatch` to the component instance.
+> `createEventDispatcher` deve ser chamada quando o componente for instanciado primeiro — não podemos fazê-lo depois dentro de, por exemplo, uma função de resposta `setTimeout`. Isto liga `dispatch` à instância do componente.
 
-Then, add an `on:message` handler in `App.svelte`:
+Depois, adicionamos um manipulador `on:message` no `App.svelte`:
 
 ```svelte
 /// file: App.svelte
 <Inner +++on:message={handleMessage}+++ />
 ```
 
-> You can also try changing the event name to something else. For instance, change `dispatch('message', {...})` to `dispatch('greet', {...})` in `Inner.svelte` and change the attribute name from `on:message` to `on:greet` in `App.svelte`.
+> Nós também podemos tentar mudar o nome do evento para outra coisa. Por exemplo, mudar `dispatch('message', {...})` para `dispatch('greet', {...})` no `Inner.svelte` e mudar o nome do atributo de `on:message` para `on:greet` no `App.svelte`.
