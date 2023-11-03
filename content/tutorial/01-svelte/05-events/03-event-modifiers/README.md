@@ -1,8 +1,8 @@
 ---
-title: Event modifiers
+title: Modificadores de Evento
 ---
 
-DOM event handlers can have _modifiers_ that alter their behaviour. For example, a handler with a `once` modifier will only run a single time:
+Os manipuladores de evento do DOM podem ter _modificadores_ que alteram o seu comportamento. Por exemplo, um manipulador com um modificador `once` executará apenas uma única vez:
 
 ```svelte
 /// file: App.svelte
@@ -11,15 +11,15 @@ DOM event handlers can have _modifiers_ that alter their behaviour. For example,
 </button>
 ```
 
-The full list of modifiers:
+A lista completa de modificadores:
 
-- `preventDefault` — calls `event.preventDefault()` before running the handler. Useful for client-side form handling, for example.
-- `stopPropagation` — calls `event.stopPropagation()`, preventing the event reaching the next element
-- `passive` — improves scrolling performance on touch/wheel events (Svelte will add it automatically where it's safe to do so)
-- `nonpassive` — explicitly set `passive: false`
-- `capture` — fires the handler during the [_capture_](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_capture) phase instead of the [_bubbling_](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling) phase
-- `once` — remove the handler after the first time it runs
-- `self` — only trigger handler if event.target is the element itself
-- `trusted` — only trigger handler if `event.isTrusted` is `true`, meaning the event was triggered by a user action rather than because some JavaScript called `element.dispatchEvent(...)`
+- `preventDefault` — chama `event.preventDefault()` antes de executar o manipulador. Por exemplo, é útil para manipular o formulário do lado do cliente.
+- `stopPropagation` — chama `event.stopPropagation()`, impedindo o evento de alcançar o próximo elemento.
+- `passive` — melhora o desempenho do deslocamento sobre os eventos de toque ou roda (a Svelte o adicionará automaticamente onde for seguro)
+- `nonpassive` — define explicitamente `passive: false`
+- `capture` — dispara o manipular durante a fase de [_captura_](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_capture) ao invés da fase de [_transbordamento_](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling)
+- `once` — remove o manipulador depois de executar uma vez
+- `self` — apenas aciona manipulador se `event.target` for o próprio elemento
+- `trusted` — apenas aciona o manipulador se `event.isTrusted` for `true`, o que significa que o evento foi acionado por uma ação do utilizador ao invés de por causa de algum JavaScript chama `element.dispatchEvent(...)`
 
-You can chain modifiers together, e.g. `on:click|once|capture={...}`.
+Nós podemos encadear os modificadores juntos, por exemplo `on:click|once|capture={...}`.
