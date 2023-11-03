@@ -1,10 +1,10 @@
 ---
-title: DOM event forwarding
+title: Expedição de Evento do DOM
 ---
 
-Event forwarding works for DOM events too.
+A expedição de evento também funciona para os eventos do DOM.
 
-We want to get notified of clicks on our `<BigRedButton>` — to do that, we just need to forward `click` events on the `<button>` element in `BigRedButton.svelte`:
+Nós queremos ser notificados a respeito dos cliques sobre o nosso `<BigRedButton>` — para fazer isto, apenas precisamos expedir os eventos de `click` sobre o elemento `<button>` no `BigRedButton.svelte`:
 
 ```svelte
 /// file: BigRedButton.svelte
