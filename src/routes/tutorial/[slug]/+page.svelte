@@ -126,9 +126,9 @@
 </script>
 
 <svelte:head>
-	<title>{data.exercise.chapter.title} / {data.exercise.title} • Seminário da Svelte</title>
+	<title>{data.exercise.chapter.title} / {data.exercise.title} • Tutorial da Svelte</title>
 
-	<meta name="twitter:title" content="{data.exercise.title} • Seminário da Svelte" />
+	<meta name="twitter:title" content="{data.exercise.title} • Tutorial da Svelte" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@sveltejs" />
 	<meta name="twitter:creator" content="@sveltejs" />
@@ -136,7 +136,7 @@
 	<meta property="twitter:domain" content="svelte-docs-pt.vercel.app" />
 	<meta property="twitter:url" content="https://svelte-docs-pt.vercel.app" />
 
-	<meta property="og:title" content="{data.exercise.title} • Seminário da Svelte" />
+	<meta property="og:title" content="{data.exercise.title} • Tutorial da Svelte" />
 	<meta property="og:url" content="https://svelte-docs-pt.vercel.app" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://svelte.dev/images/twitter-thumbnail.jpg" />
