@@ -65,7 +65,7 @@
 
 				{#if is_svelte}
 					<a href="https://svelte-docs-pt.vercel.app/tutorial/{$page.data.exercise.slug}">
-						Siga para o antigo seminário interativo da svelte <Icon name="arrow-right" />
+						Siga para o antigo tutorial da Svelte <Icon name="arrow-right" />
 					</a>
 				{/if}
 			</div>
