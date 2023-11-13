@@ -15,7 +15,7 @@ async function get_nav_list() {
 
 	return [
 		{
-			title: 'Seminário',
+			title: 'Tutorial',
 			prefix: 'tutorial',
 			pathname: '/tutorial',
 			sections: index.map(({ chapters, title }) => ({
