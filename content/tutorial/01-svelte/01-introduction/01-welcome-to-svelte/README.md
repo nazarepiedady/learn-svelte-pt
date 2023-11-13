@@ -14,7 +14,7 @@ Estes componentes são _compilados_ em pequenos módulos eficientes de JavaScrip
 
 Nós podemos construir a nossa aplicação inteira com a Svelte (por exemplo, usando uma abstração de aplicação como a [SvelteKit](https://sveltekit-docs-pt.vercell.app), que este tutorial cobrirá), ou podemos adicioná-la incrementalmente à uma base de código existente. Nós também podemos entregar componentes como pacotes autónomos que funcionam em qualquer parte.
 
-## Como Usar este Seminário
+## Como Usar este Tutorial
 
 > Nós precisaremos ter familiaridade básica com o HTML, CSS e JavaScript para entender a Svelte.
 
