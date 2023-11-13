@@ -16,7 +16,7 @@
 				pressed = false;
 				dispatch('change', { pressed });
 			}
-		}}>Seminário</button
+		}}>Tutorial</button
 	>
 	<ToggleButton label="Mostrar o editor" {pressed} on:change />
 	<button
