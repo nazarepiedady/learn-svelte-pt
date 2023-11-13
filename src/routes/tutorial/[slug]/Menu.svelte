@@ -70,7 +70,7 @@
 
 			{#if is_open}
 				<nav
-					aria-label="exercícios do seminário"
+					aria-label="exercícios do tutorial"
 					transition:slide={{ axis: 'y', easing: expoOut, duration: $reduced_motion ? 0 : 400 }}
 				>
 					<div class="exercises">
