@@ -1,19 +1,19 @@
 ---
-title: Textarea inputs
+title: Entradas de Área de Texto
 ---
 
-The `<textarea>` element behaves similarly to a text input in Svelte — use `bind:value`:
+O elemento `<textarea>` comporta-se de maneira semelhante à entrada de texto na Svelte — usamos `bind:value`:
 
 ```svelte
 /// file: App.svelte
 <textarea +++bind:value=+++{value}></textarea>
 ```
 
-In cases like these, where the names match, we can also use a shorthand form:
+Em casos como estes, onde os nomes correspondem-se, também podemos usar a forma abreviada:
 
 ```svelte
 /// file: App.svelte
 <textarea +++bind:value+++></textarea>
 ```
 
-This applies to all bindings, not just textareas.
+Isto aplica-se à todos os vínculos, não apenas aos de áreas de texto.
