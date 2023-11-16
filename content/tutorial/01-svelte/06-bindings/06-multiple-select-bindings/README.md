@@ -1,10 +1,10 @@
 ---
-title: Select multiple
+title: Várias Seleções
 ---
 
-A `<select>` element can have a `multiple` attribute, in which case it will populate an array rather than selecting a single value.
+Um elemento `<select>` pode ter um atributo `multiple`, neste caso povoará um vetor ao invés de selecionar um único valor.
 
-Replace the checkboxes with a `<select multiple>`:
+Substituímos as caixas de confirmação por um um `<select multiple>`:
 
 ```svelte
 /// file: App.svelte
@@ -17,6 +17,6 @@ Replace the checkboxes with a `<select multiple>`:
 +++</select>+++
 ```
 
-Note that we're able to omit the `value` attribute on the `<option>`, since the value is identical to the element's contents.
+Nota que somos capazes de omitir o atributo `value` sobre o `<option>`, uma vez que o valor é idêntico ao conteúdo do elemento.
 
-> Press and hold the `control` key (or the `command` key on MacOS) to select multiple options.
+> Pressionamos e seguramos a tecla `control` (ou a tecla `command` no MacOS) para selecionar várias opções.
