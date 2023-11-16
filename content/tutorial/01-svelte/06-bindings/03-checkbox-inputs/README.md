@@ -1,8 +1,8 @@
 ---
-title: Checkbox inputs
+title: Entradas de Caixa de Confirmação
 ---
 
-Checkboxes are used for toggling between states. Instead of binding to `input.value`, we bind to `input.checked`:
+As caixas de confirmação são usadas para alternar entre estados. No lugar de vincular à `input.value`, vinculamos à `input.checked`:
 
 ```svelte
 /// file: App.svelte
