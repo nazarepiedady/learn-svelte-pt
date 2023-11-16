@@ -1,10 +1,10 @@
 ---
-title: Group inputs
+title: Entradas de Grupo
 ---
 
-If you have multiple `type="radio"` or `type="checkbox"` inputs relating to the same value, you can use `bind:group` along with the `value` attribute. Radio inputs in the same group are mutually exclusive; checkbox inputs in the same group form an array of selected values.
+Se tivermos várias entradas de `type="radio"` ou `type="checkbox"` relacionadas ao mesmo valor, podemos usar `bind:group` juntamente com o atributo `value`. As entradas de rádio no mesmo grupo são mutuamente exclusivas; as entradas de caixa de confirmação no mesmo grupo formam um vetor de valores selecionados.
 
-Add `bind:group={scoops}` to the radio inputs...
+Adicionamos `bind:group={scoops}` às entradas de rádio...:
 
 ```svelte
 /// file: App.svelte
@@ -16,7 +16,7 @@ Add `bind:group={scoops}` to the radio inputs...
 />
 ```
 
-...and `bind:group={flavours}` to the checkbox inputs:
+...e `bind:group={flavours}` às entradas de caixa de confirmação:
 
 ```svelte
 /// file: App.svelte
