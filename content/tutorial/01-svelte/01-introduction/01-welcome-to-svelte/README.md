@@ -2,7 +2,7 @@
 title: Bem-vindo à Svelte
 ---
 
-Bem-vindo ao tutorial da Svelte! Este nos ensinará tudo que o precisamos de saber para construir facilmente aplicações da Web de todos os tamanhos, com alto desempenho e uma pegada pequena.
+Bem-vindo ao tutorial da Svelte! Este nos ensinará tudo que precisamos saber para construir facilmente aplicações da Web de todos os tamanhos, com alto desempenho e uma pegada pequena.
 
 Nós também podemos consultar a [documentação da API](https://svelte-docs-pt.vercel.app/docs) e os [exemplos](https://svelte-docs-pt.vercel.app/examples), ou — se estivermos impacientes para começar trabalhar sobre a nossa máquina localmente — podemos criar um projeto com `npm init svelte`.
 
