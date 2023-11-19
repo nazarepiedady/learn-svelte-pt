@@ -2,9 +2,9 @@
 title: onMount
 ---
 
-Every component has a _lifecycle_ that starts when it is created, and ends when it is destroyed. There are a handful of functions that allow you to run code at key moments during that lifecycle. The one you'll use most frequently is `onMount`, which runs after the component is first rendered to the DOM.
+Todo componente tem um _ciclo de vida_ que começa quando for criado, e termina quando for destruído. Existem um punhado de funções que permitem-nos executar código em momentos chaves durante este ciclo de vida. Aquela que usaremos com mais frequência é `onMount`, que executa depois do componente ser desenhado primeiro no DOM.
 
-In this exercise, we have a `<canvas>` that we'd like to animate, using the `paint` function in `gradient.js`. Begin by importing the function from `svelte`:
+Neste exercício, teremos um `<canvas>` que gostaríamos de animar, usando a função `paint` no `gradient.js`. Começamos importando a função a partir da `svelte`:
 
 ```svelte
 /// file: App.svelte
@@ -14,7 +14,7 @@ In this exercise, we have a `<canvas>` that we'd like to animate, using the `pai
 </script>
 ```
 
-Then, add a function that runs when the component mounts:
+Depois, adicionamos uma função que executa quando componente montar:
 
 ```svelte
 /// file: App.svelte
@@ -34,9 +34,9 @@ Then, add a function that runs when the component mounts:
 </script>
 ```
 
-> In a [later exercise](bind-this), we'll learn how to get an element reference without using `document.querySelector`.
+> Num [exercício posterior](bind-this),, aprendermos como obter a referência dum elemento sem usar o `document.querySelector`.
 
-So far so good — you should see gently undulating colours in the shape of the Svelte logo. But there's one problem — the loop will continue even after the component has been destroyed. To fix that, we need to return a cleanup function from `onMount`:
+Até agora muito bem — devemos ver cores onduladas gentilmente na forma do logótipo da Svelte. Mas não há problema — o laço de repetição continuará mesmo depois do componente ter sido destruído. Para corrigirmos isto, precisamos retornar uma função de limpeza a partir da `onMount`:
 
 ```js
 /// file: App.svelte
