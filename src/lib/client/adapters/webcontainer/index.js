@@ -25,7 +25,7 @@ let vm;
  * @returns {Promise<import('$lib/types').Adapter>}
  */
 export async function create(base, error, progress, logs, warnings) {
-	progress.set({ value: 0, text: 'loading files' });
+	progress.set({ value: 0, text: 'carregando os ficheiros' });
 
 	const q = yootils.queue(1);
 	/** @type {Map<string, Array<import('$lib/types').FileStub>>} */
@@ -34,10 +34,10 @@ export async function create(base, error, progress, logs, warnings) {
 	/** Paths and contents of the currently loaded file stubs */
 	let current_stubs = stubs_to_map([]);
 
-	progress.set({ value: 1 / 5, text: 'booting webcontainer' });
+	progress.set({ value: 1 / 5, text: 'iniciando o contentor da Web' });
 	vm = await WebContainer.boot();
 
-	progress.set({ value: 2 / 5, text: 'writing virtual files' });
+	progress.set({ value: 2 / 5, text: 'escrevendo os ficheiros virtuais' });
 	const common = await ready;
 	await vm.mount({
 		'common.zip': {
@@ -89,7 +89,7 @@ export async function create(base, error, progress, logs, warnings) {
 			}
 		});
 
-	progress.set({ value: 3 / 5, text: 'unzipping files' });
+	progress.set({ value: 3 / 5, text: 'descompactando os ficheiros' });
 	const unzip = await vm.spawn('node', ['unzip.cjs']);
 	unzip.output.pipeTo(log_stream());
 	const code = await unzip.exit;
@@ -114,7 +114,7 @@ export async function create(base, error, progress, logs, warnings) {
 		if (launched) return;
 		launched = true;
 
-		progress.set({ value: 4 / 5, text: 'starting dev server' });
+		progress.set({ value: 4 / 5, text: 'iniciando o servidor de desenvolvimento' });
 
 		await new Promise(async (fulfil, reject) => {
 			const error_unsub = vm.on('error', (error) => {
@@ -124,7 +124,7 @@ export async function create(base, error, progress, logs, warnings) {
 
 			const ready_unsub = vm.on('server-ready', (_port, base) => {
 				ready_unsub();
-				progress.set({ value: 5 / 5, text: 'ready' });
+				progress.set({ value: 5 / 5, text: 'pronto' });
 				fulfil(base); // this will be the last thing that happens if everything goes well
 			});
 
