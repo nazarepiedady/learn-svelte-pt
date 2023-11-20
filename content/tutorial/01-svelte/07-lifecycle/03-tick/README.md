@@ -2,11 +2,11 @@
 title: tick
 ---
 
-The `tick` function is unlike other lifecycle functions in that you can call it any time, not just when the component first initialises. It returns a promise that resolves as soon as any pending state changes have been applied to the DOM (or immediately, if there are no pending state changes).
+A função `tick` é diferente de outras funções do ciclo de vida a que podemos chamar a qualquer momento, não apenas quando o componente inicializa primeiro. Esta retorna uma promessa que resolve assim que quaisquer mudanças de estado pendentes tiver sido aplicada ao DOM (ou imediatamente, se não existirem mudanças de estado pendentes).
 
-When you update component state in Svelte, it doesn't update the DOM immediately. Instead, it waits until the next _microtask_ to see if there are any other changes that need to be applied, including in other components. Doing so avoids unnecessary work and allows the browser to batch things more effectively.
+Quando atualizamos o estado do componente na Svelte, esta não atualiza o DOM imediatamente. No lugar disto, espera até a próxima _micro-tarefa_ para ver se existem quaisquer outras mudanças que precisam de ser aplicadas, incluindo em outros componentes. Fazendo assim evita trabalho desnecessário e permite o navegador organizar por grupos as coisas mais eficientemente.
 
-You can see that behaviour in this example. Select a range of text and hit the tab key. Because the `<textarea>` value changes, the current selection is cleared and the cursor jumps, annoyingly, to the end. We can fix this by importing `tick`...
+Nós podemos ver este comportamento neste exemplo. Selecionamos um limite de texto e pressionamos tecla de tabulação. Uma vez que o valor de `<textarea>` muda, a seleção atual é limpada e a barra intermitente pula, irritantemente, para o final. Nós podemos corrigir isto importando `tick`...:
 
 ```js
 /// file: App.svelte
@@ -15,7 +15,7 @@ You can see that behaviour in this example. Select a range of text and hit the t
 let text = `Select some text and hit the tab key to toggle uppercase`;
 ```
 
-...and running it immediately before we set `this.selectionStart` and `this.selectionEnd` at the end of `handleKeydown`:
+...e executando-a imediatamente antes de definirmos `this.selectionStart` e `this.selectionEnd` no final da `handleKeydown`:
 
 ```js
 /// file: App.svelte
