@@ -2,7 +2,7 @@
 	import { count } from './stores.js';
 
 	function reset() {
-		// TODO reset the count
+		// TODO reiniciar a contagem
 	}
 </script>
 
