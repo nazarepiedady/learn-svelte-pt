@@ -1,14 +1,14 @@
 ---
-title: Writable stores
+title: Memórias Graváveis
 ---
 
-Not all application state belongs inside your application's component hierarchy. Sometimes, you'll have values that need to be accessed by multiple unrelated components, or by a regular JavaScript module.
+Nem todo estado da aplicação pertence ao interior da hierarquia de componente da nossa aplicação. Algumas vezes, teremos valores que precisam ser acessados por vários componentes independentes, ou por um módulo normal de JavaScript.
 
-In Svelte, we do this with _stores_. A store is simply an object with a `subscribe` method that allows interested parties to be notified whenever the store value changes. In `App.svelte`, `count` is a store, and we're setting `count_value` in the `count.subscribe` callback.
+Na Svelte, fazemos isto com as _memórias_. Uma memória é simplesmente um objeto com um método `subscribe` que permite as partes interessadas serem notificadas sempre que o valor da memória mudar. No `App.svelte`, `count` é uma memória, e definimos `count_value` na função de resposta da `count.subscribe`.
 
-Open `stores.js` to see the definition of `count`. It's a _writable_ store, which means it has `set` and `update` methods in addition to `subscribe`.
+Abrimos `stores.js` para ver a definição de `count`. É uma memória _gravável_, o que significa que tem os métodos `set` e `update` além do `subscribe`.
 
-Now, in `Incrementer.svelte`, wire up the `+` button:
+Agora, no `Incrementer.svelte`, ligamos o botão `+`:
 
 ```js
 /// file: Incrementer.svelte
@@ -17,9 +17,9 @@ function increment() {
 }
 ```
 
-Clicking the `+` button should now update the count. Do the inverse for `Decrementer.svelte`.
+Agora, o ato de clicar sobre o botão `+` deve atualizar a contagem. Fazemos o inverso para o `Decrementer.svelte`.
 
-Finally, in `Resetter.svelte`, implement `reset`:
+Finalmente, no `Resetter.svelte`, implementamos `reset`:
 
 ```js
 /// file: Resetter.svelte
