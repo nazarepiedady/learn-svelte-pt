@@ -1,10 +1,10 @@
 ---
-title: Readable stores
+title: Memórias Legíveis
 ---
 
-Not all stores should be writable by whoever has a reference to them. For example, you might have a store representing the mouse position or the user's geolocation, and it doesn't make sense to be able to set those values from 'outside'. For those cases, we have _readable_ stores.
+Nem todas as memórias devem ser graváveis por quem quer que tiver uma referência às mesmas. Por exemplo, podemos ter uma memória representando a posição do rato ou a localização geográfica do utilizador, e não faz sentido ser capaz de definir estes valores a partir do 'lado de fora'. Para estes casos, temos as memórias _legíveis_.
 
-Open `stores.js`. The first argument to `readable` is an initial value, which can be `null` or `undefined` if you don't have one yet. The second argument is a `start` function that takes a `set` callback and returns a `stop` function. The `start` function is called when the store gets its first subscriber; `stop` is called when the last subscriber unsubscribes.
+Abrimos o `stores.js`. O primeiro argumento para `readable` é um valor inicial, o qual pode ser `null` ou `undefined` se ainda não tivermos um. O segundo argumento é uma função `start` que recebe uma função de resposta `set` e retorna uma função `stop`. A função `start` é chamada quando a memória recebe o seu primeiro subscritor; `stop` é chamada quando o último subscritor desfazer a subscrição:
 
 ```js
 /// file: stores.js
