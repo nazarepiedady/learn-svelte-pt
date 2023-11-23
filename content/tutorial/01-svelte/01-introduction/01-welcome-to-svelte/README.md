@@ -6,7 +6,7 @@ Bem-vindo ao tutorial da Svelte! Este nos ensinará tudo que precisamos saber pa
 
 Nós também podemos consultar a [documentação da API](https://svelte-docs-pt.vercel.app/docs) e os [exemplos](https://svelte-docs-pt.vercel.app/examples), ou — se estivermos impacientes para começar trabalhar sobre a nossa máquina localmente — podemos criar um projeto com `npm init svelte`.
 
-## O Que é Svelte?
+## Que é Svelte?
 
 A Svelte é uma ferramenta para construção de aplicações da Web. Tal como outras abstrações de interface de utilizador, permite-nos construir a nossa aplicação _de maneira declarativa_ a partir de componentes que combinam marcação, estilos e comportamentos. 
 
@@ -16,7 +16,7 @@ Nós podemos construir a nossa aplicação inteira com a Svelte (por exemplo, us
 
 ## Como Usar este Tutorial
 
-> Nós precisaremos ter familiaridade básica com o HTML, CSS e JavaScript para entender a Svelte.
+> Nós precisaremos ter familiaridade básica com a HTML, CSS e JavaScript para entender a Svelte.
 
 Este tutorial está separado em quatro partes principais:
 
