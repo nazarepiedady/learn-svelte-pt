@@ -1,8 +1,8 @@
 ---
-title: Custom JS transitions
+title: Transições de JavaScript Personalizadas
 ---
 
-While you should generally use CSS for transitions as much as possible, there are some effects that can't be achieved without JavaScript, such as a typewriter effect:
+Embora devamos usar geralmente a CSS para as transições tanto quanto possível, existem alguns efeitos que não podem ser alcançados sem JavaScript, como o efeito de máquina de escrever:
 
 ```js
 /// file: App.svelte
