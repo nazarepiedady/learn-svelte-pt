@@ -1,31 +1,31 @@
-# learn.svelte.dev
+# learn.svelte.dev (Português)
 
-A soup-to-nuts interactive tutorial on how to build apps with Svelte.
+Um tutorial interativo completo sobre como construir aplicações com a Svelte.
 
-## Setup
+## Configuração
 
-This repo uses [pnpm](https://pnpm.io/).
+Este repositório usa a [`pnpm`](https://pnpm.io/).
 
-## Developing the app
+## Desenvolvendo a Aplicação
 
-First, run `node scripts/create-common-bundle`. This packages up everything that's needed to run a SvelteKit app (Vite, esbuild, SvelteKit, Svelte compiler, etc.) which can subsequently be unpacked on a server to create and run an instance of a SvelteKit application (which powers the output window of the tutorial). Then, run `dev`:
+Primeiro, executamos `node scripts/create-common-bundle`. Este pacote contém tudo o que é necessário para executar uma aplicação de SvelteKit (Vite, esbuild, SvelteKit, compilador da Svelte, etc) que pode ser posteriormente descompactado num servidor para criar e executar uma instância duma aplicação de SvelteKit (que alimenta a janela de saída do tutorial). Depois, executamos `dev`:
 
 ```bash
 node scripts/create-common-bundle
 pnpm dev
 ```
 
-To build for production and run locally:
+Para construirmos para produção e executarmos localmente:
 
 ```bash
 pnpm build
 pnpm preview
 ```
 
-## Creating new tutorials
+## Criando Novos Tutoriais
 
-Tutorials live inside `content`. Each tutorial consists of a `README.md`, which is the text to the left, and `app-a` and `app-b` folders, which represent the initial and solved state. Files that stay the same can be omitted from `app-b`. Files are marked as deleted in `app-b` if they start with `__delete`. Folders that are marked as deleted in `app-b` if they contain a file named `__delete`.
+Os tutoriais estão dentro de `content`. Cada tutorial consiste num `README.md`, uqe é o texto à esquerda, e as pastas `app-a` e `app-b`, que representam o estado inicial e o estado resolvido. Os ficheiros que se mantêm inalterados podem ser omitidos da `app-b`. Os ficheiros são marcados como eliminados em `app-b` se começarem com `__delete`. As pastas são marcadas como eliminadas na `app-b` se contiverem um ficheiro nomeado `__delete`.
 
-## Bumping tutorial dependencies
+## Atualizando as Dependências do Tutorial
 
-Bump the dependency (for example Svelte) in both the root and the `content/common` `package.json`. In the root do `pnpm i` (to update `pnpm-lock.yaml`), in `content/common` do `npm i` (to update `package-lock.json`).
+Atualizamos a dependência (por exemplo, Svelte) tanto na raiz quanto no `package.json` da `content/common`. Na raiz fazemos `pnpm i` (para atualizar o `pnpm-lock.yaml`), na `content/common` fazemos `npm i` (para atualizar o `package-lock.json`).
