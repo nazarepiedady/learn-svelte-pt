@@ -1,8 +1,8 @@
 ---
-title: Custom CSS transitions
+title: Transições de CSS Personalizadas
 ---
 
-The `svelte/transition` module has a handful of built-in transitions, but it's very easy to create your own. By way of example, this is the source of the `fade` transition:
+O módulo `svelte/transition` tem um punhado de transições embutidas, mas é muito fácil criar nossas próprias transições. Por exemplo, este é o código-fonte da transição `fade`:
 
 ```js
 /// no-file
@@ -17,19 +17,19 @@ function fade(node, { delay = 0, duration = 400 }) {
 }
 ```
 
-The function takes two arguments — the node to which the transition is applied, and any parameters that were passed in — and returns a transition object which can have the following properties:
+A função recebe dois argumentos — o nó ao qual a transição é aplicada, e quaisquer parâmetros que foram passados — e retorna um objeto de transição que pode ter as seguintes propriedades:
 
-- `delay` — milliseconds before the transition begins
-- `duration` — length of the transition in milliseconds
-- `easing` — a `p => t` easing function (see the chapter on [tweening](/tutorial/tweens))
-- `css` — a `(t, u) => css` function, where `u === 1 - t`
-- `tick` — a `(t, u) => {...}` function that has some effect on the node
+- `delay` — milissegundos antes da transição começar
+- `duration` — duração da transição em milissegundos
+- `easing` — uma função atenuante `p => t` (consular o capítulo sobre [intercalação](/tutorial/tweens))
+- `css` — uma função `(t, u) => css`, onde `u === 1 - t`
+- `tick` — uma função `(t, u) => {...}` que tem algum efeito sobre o nó
 
-The `t` value is `0` at the beginning of an intro or the end of an outro, and `1` at the end of an intro or beginning of an outro.
+O valor de `t` é `0` no início duma introdução ou no final duma conclusão, e `1` no final duma introdução ou no início duma conclusão.
 
-Most of the time you should return the `css` property and _not_ the `tick` property, as CSS animations run off the main thread to prevent jank where possible. Svelte 'simulates' the transition and constructs a CSS animation, then lets it run.
+Na maioria das vezes devemos retornar a propriedade `css` e _não_ a propriedade `tick`, porque as animações de CSS são executadas fora da linha principal para evitar brincadeiras sempre que possível. A Svelte 'simula' a transição e constrói uma animação de CSS, e depois deixa-a executar.
 
-For example, the `fade` transition generates a CSS animation somewhat like this:
+Por exemplo, a transição `fade` gera uma animação de CSS mais ou menos assim:
 
 ```css
 /// no-file
@@ -40,7 +40,7 @@ For example, the `fade` transition generates a CSS animation somewhat like this:
 100% { opacity: 1 }
 ```
 
-We can get a lot more creative though. Let's make something truly gratuitous:
+Mas podemos ser muito mais criativos. Façamos algo verdadeiramente infundado:
 
 ```svelte
 /// file: App.svelte
@@ -69,4 +69,4 @@ We can get a lot more creative though. Let's make something truly gratuitous:
 </script>
 ```
 
-Remember: with great power comes great responsibility.
+Lembre-se: com grande poder vem grande responsabilidade.
