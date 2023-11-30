@@ -1,10 +1,10 @@
 ---
-title: Key blocks
+title: Blocos Chaves
 ---
 
-Key blocks destroy and recreate their contents when the value of an expression changes. This is useful if you want an element to play its transition whenever a value changes instead of only when the element enters or leaves the DOM.
+Os blocos chaves destroem e recriam os seus conteúdos quando o valor duma expressão muda. Isto é útil se quisermos um elemento reproduza a sua transição sempre que um valor mudar ao invés de apenas quando o elemento entrar ou sair do DOM.
 
-Here, for example, we'd like to play the `typewriter` transition from `transition.js` whenever the loading message, i.e. `i` changes. Wrap the `<p>` element in a key block:
+Eis, por exemplo, que gostaríamos de reproduzir a transição `typewriter` a partir do `transition.js` sempre que a mensagem de carregamento, isto é, `i` mudar. Envolvemos o elemento `<p>` num bloco chave:
 
 ```svelte
 /// file: App.svelte
