@@ -1,12 +1,12 @@
 ---
-title: The animate directive
+title: A Diretiva de Animação
 ---
 
-In the [previous chapter](/tutorial/deferred-transitions), we used deferred transitions to create the illusion of motion as elements move from one todo list to the other.
+No [capítulo anterior](/tutorial/deferred-transitions), usamos transições retardadas para criar a ilusão de movimento a medida que os elementos se movem de uma lista de afazer à outra.
 
-To complete the illusion, we also need to apply motion to the elements that _aren't_ transitioning. For this, we use the `animate` directive.
+Para completar a ilusão, também precisamos aplicar movimento aos elementos que _não são_ transitando. Para isto, usamos a diretiva `animate`.
 
-First, import the `flip` function — flip stands for ['First, Last, Invert, Play'](https://aerotwist.com/blog/flip-your-animations/) — from `svelte/animate` into `TodoList.svelte`:
+Primeiro, importamos a função `flip` — `flip` significa ['First (Primeiro), Last (Último), Invert (Inverter), Play (Reproduzir)'](https://aerotwist.com/blog/flip-your-animations/) — a partir do `svelte/animate` no `TodoList.svelte`:
 
 ```svelte
 /// file: TodoList.svelte
@@ -19,7 +19,7 @@ First, import the `flip` function — flip stands for ['First, Last, Invert, Pla
 </script>
 ```
 
-Then add it to the `<li>` elements:
+Depois o adicionamos aos elementos `<li>`:
 
 ```svelte
 /// file: TodoList.svelte
@@ -31,7 +31,7 @@ Then add it to the `<li>` elements:
 >
 ```
 
-The movement is a little slow in this case, so we can add a `duration` parameter:
+O movimento é um pouco lento neste caso, então podemos adicionar um parâmetro `duration`:
 
 ```svelte
 /// file: TodoList.svelte
@@ -43,6 +43,6 @@ The movement is a little slow in this case, so we can add a `duration` parameter
 >
 ```
 
-> `duration` can also be a `d => milliseconds` function, where `d` is the number of pixels the element has to travel
+> `duration` também pode ser uma função `d => milliseconds`, onde `d` é o número de pixeis que o elemento tem de viajar
 
-Note that all the transitions and animations are being applied with CSS, rather than JavaScript, meaning they won't block (or be blocked by) the main thread.
+Nota que todas as transições e animações estão sendo aplicadas com a CSS, ao invés de serem com a JavaScript, o que significa que não bloquearão (ou serão bloqueadas pela) a linha principal.
