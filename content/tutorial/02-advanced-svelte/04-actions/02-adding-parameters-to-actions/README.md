@@ -1,12 +1,12 @@
 ---
-title: Adding parameters
+title: Adicionando Parâmetros
 ---
 
-Like transitions and animations, an action can take an argument, which the action function will be called with alongside the element it belongs to.
+Tal como as transições e animações, uma ação pode receber um argumento, com o qual a função de ação será chamada juntamente com o elemento a que pertence.
 
-In this exercise, we want to add a tooltip to the `<button>` using the [`Tippy.js`](https://atomiks.github.io/tippyjs/) library. The action is already wired up with `use:tooltip`, but if you hover over the button (or focus it with the keyboard) the tooltip contains no content.
+Neste exercício, queremos adicionar uma dica de ferramenta ao `<button>` usando a biblioteca [`Tippy.js`](https://atomiks.github.io/tippyjs/). A ação já está ligada com `use:tooltip`, mas se pairarmos ponteiro do rato sobre o botão (ou se o focarmos com o teclado) a dica de ferramenta não contém conteúdo.
 
-First, the action needs to accept some options and pass them to Tippy:
+Primeiro, a ação precisa aceitar algumas opções e passá-las à Tippy:
 
 ```js
 /// file: App.svelte
@@ -21,7 +21,7 @@ function tooltip(node, +++options+++) {
 }
 ```
 
-Then, we need to pass some options into the action:
+Depois, precisamos passar algumas opções à ação:
 
 ```svelte
 /// file: App.svelte
@@ -30,7 +30,7 @@ Then, we need to pass some options into the action:
 </button>
 ```
 
-The tooltip now works — almost. If we change the text in the `<input>`, the tooltip will not reflect the new content. We can fix that by adding an `update` method to the returned object.
+A dica de ferramenta agora funciona — quase. Se mudarmos o texto no `<input>`, a dica de ferramenta não refletirá o novo conteúdo. Nós podemos corrigir isto adicionando um método `update` ao objeto retornado:
 
 ```js
 /// file: App.svelte
