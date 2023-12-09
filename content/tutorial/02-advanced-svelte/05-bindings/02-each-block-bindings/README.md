@@ -1,8 +1,8 @@
 ---
-title: Each block bindings
+title: Vínculos de Bloco Each
 ---
 
-You can even bind to properties inside an `each` block.
+Nós podemos vincular às propriedades dentro dum bloco `each`:
 
 ```svelte
 /// file: App.svelte
@@ -22,4 +22,4 @@ You can even bind to properties inside an `each` block.
 {/each}
 ```
 
-> Note that interacting with these `<input>` elements will mutate the array. If you prefer to work with immutable data, you should avoid these bindings and use event handlers instead.
+> Nota que interagir com estes elementos de `<input>` mudará o vetor. Se preferimos trabalhar com dados imutáveis, devemos evitar estes vínculos e ao invés destes usar manipuladores de evento.
