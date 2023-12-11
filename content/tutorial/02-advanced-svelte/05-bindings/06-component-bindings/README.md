@@ -1,8 +1,8 @@
 ---
-title: Component bindings
+title: Vínculos do Componente
 ---
 
-Just as you can bind to properties of DOM elements, you can bind to component props. For example, we can bind to the `value` prop of this `<Keypad>` component as though it were a form element:
+Tal como podemos vincular às propriedades dos elementos do DOM, podemos vincular às propriedades do componente. Por exemplo, podemos vincular à propriedade `value` deste componente `<Keypad>` como se fosse um elemento de formulário:
 
 ```svelte
 /// file: App.svelte
@@ -12,6 +12,6 @@ Just as you can bind to properties of DOM elements, you can bind to component pr
 />
 ```
 
-Now, when the user interacts with the keypad, the value of `pin` in the parent component is immediately updated.
+Agora, quando o utilizador interagir com o teclado, o valor do `pin` componente pai é atualizado imediatamente.
 
-> Use component bindings sparingly. It can be difficult to track the flow of data around your application if you have too many of them, especially if there is no 'single source of truth'.
+> Use os vínculos de componente moderadamente. Pode ser rastrear o fluxo de dados em torno da nossa aplicação se tivermos muitos destes, especialmente se não existir 'uma única fonte de verdade'.
