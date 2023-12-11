@@ -1,12 +1,12 @@
 ---
-title: Binding to component instances
+title: Vincular às Instâncias do Componente
 ---
 
-Just as you can bind to DOM elements, you can bind to component instances themselves with `bind:this`.
+Tal como podemos vincular aos elementos do DOM, podemos vincular às próprias instâncias do componente com `bind:this`.
 
-This is useful in the rare cases that you need to interact with a component programmatically (rather than by providing it with updated props). Revisiting our canvas app from [a few exercises ago](actions), it would be nice to add a button to clear the screen.
+Isto é útil nos casos raros em que precisamos interagir com um componente programaticamente (ao invés de fornecê-lo com propriedades atualizadas). Revisitando a nossa aplicação de tela de pintura de [alguns exercícios atrás](actions), seria bom adicionar um botão para limpar o ecrã.
 
-First, let's export a function from `Canvas.svelte`:
+Primeiro, vamos exportar uma função a partir do `Canvas.svelte`:
 
 ```svelte
 /// file: Canvas.svelte
@@ -18,7 +18,7 @@ export let size;
 }+++
 ```
 
-Then, create a reference to the component instance:
+Depois, criamos uma referência à instância do componente:
 
 ```svelte
 /// file: App.svelte
@@ -38,7 +38,7 @@ Then, create a reference to the component instance:
 	<Canvas +++bind:this={canvas}+++ color={selected} size={size} />
 ```
 
-Finally, add a button that calls the `clear` function:
+Finalmente, adicionamos um botão que chama a função `clear`:
 
 ```svelte
 /// file: App.svelte
