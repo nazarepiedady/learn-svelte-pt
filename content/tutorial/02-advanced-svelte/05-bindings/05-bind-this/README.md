@@ -2,11 +2,11 @@
 title: This
 ---
 
-In a [previous exercise](onmount), we learned how to use the `onMount` lifecycle function to paint to a canvas.
+Num [exercício anterior](onmount), aprendemos a como usar a função do ciclo de vida `onMount` para pintar numa tela.
 
-But the example is buggy — it's using `document.querySelector('canvas')`, which will always return the first `<canvas>` found on the page, which might not be the one belonging to our component.
+Mas o exemplo é defeituoso — está usando `document.querySelector('canvas')`, que sempre retornará o primeiro `<canvas>` encontrado na página, que pode não ser aquele pertencente ao nosso componente.
 
-Instead, we can use the readonly `this` binding to get a reference to the element:
+No lugar disto, podemos usar o vínculo `this` de apenas leitura para obter uma referência ao elemento:
 
 ```js
 /// file: App.svelte
@@ -36,4 +36,4 @@ onMount(() => {
 ></canvas>
 ```
 
-Note that the value of `canvas` will be `undefined` until the component has mounted.
+Nota que o valor do `canvas` será `undefined` até que o componente for montado.
