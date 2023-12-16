@@ -1,8 +1,8 @@
 ---
-title: Shorthand class directive
+title: Diretiva de Classe Abreviada
 ---
 
-Often, the name of the class will be the same as the name of the value it depends on:
+Frequentemente, o nome da classe será o mesmo que o nome do valor do qual esta depende:
 
 ```svelte
 /// no-file
@@ -13,7 +13,7 @@ Often, the name of the class will be the same as the name of the value it depend
 >
 ```
 
-In those cases we can use a shorthand form:
+Nestes casos, podemos usar uma forma abreviada:
 
 ```svelte
 /// file: App.svelte
