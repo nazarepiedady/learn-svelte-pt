@@ -1,5 +1,5 @@
 <div class="card">
-	<!-- slot goes here -->
+	<!-- colocar ranhura neste bloco -->
 </div>
 
 <style>
