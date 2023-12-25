@@ -1,8 +1,8 @@
 ---
-title: Slot fallbacks
+title: Alternativas de Ranhura
 ---
 
-A component can specify _fallbacks_ for any slots that are left empty, by putting content inside the `<slot>` element:
+Um componente pode especificar _alternativas_ para quaisquer ranhuras que são deixadas vazias, colocando o conteúdo dentro do elemento `<slot>`:
 
 ```svelte
 /// file: Card.svelte
