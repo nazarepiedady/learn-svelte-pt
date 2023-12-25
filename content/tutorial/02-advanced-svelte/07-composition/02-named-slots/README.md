@@ -1,10 +1,10 @@
 ---
-title: Named slots
+title: Ranhuras Nomeadas
 ---
 
-The previous example contained a _default slot_, which renders the direct children of a component. Sometimes you will need more control over placement. In those cases, we can use _named slots_.
+O exemplo anterior continha uma _ranhura padrão_, que interpreta os filhos diretos dum componente. Algumas vezes precisaremos de mais controlo sobre a colocação. Nestes casos, podemos usar _ranhuras nomeadas_.
 
-Inside `App.svelte`, we're rendering a `<Card>` component that contains `<span slot="telephone">` and others for `company` and `address`. Let's add the corresponding named slots in `Card.svelte`:
+Dentro do `App.svelte`, estamos interpretando um componente `<Card>` que contém `<span slot="telephone">` e outros para `company` e `address`. Adicionaremos as ranhuras nomeadas correspondentes no `Card.svelte`:
 
 ```svelte
 /// file: Card.svelte
@@ -22,7 +22,7 @@ Inside `App.svelte`, we're rendering a `<Card>` component that contains `<span s
 </div>
 ```
 
-We need to add some styles to the `<small>` element in `App.svelte` so that it occupies its own line. The contents of `<Card>` inherit styles from `Card.svelte`, such as `font-family` (the lettering is something called ['Silian Rail'](https://www.youtube.com/watch?v=aZVkW9p-cCU)), but normal scoping rules apply — we need to add the styles to `App.svelte` because that's where the element is:
+Nós precisamos adicionar alguns estilos ao elemento `<small>` no `App.svelte` para que ocupe a sua própria linha. Os conteúdos dos estilos hereditários de `<Card>` a partir do `Card.svelte`, tais como `font-family` (a inscrição é algo chamado de ['Silian Rail'](https://www.youtube.com/watch?v=aZVkW9p-cCU)), mas as regras normais de delimitação do âmbito aplicam-se — nós precisamos adicionar os estilos ao `App.svelte` porque é onde o elemento está:
 
 ```svelte
 /// file: App.svelte
@@ -42,7 +42,7 @@ We need to add some styles to the `<small>` element in `App.svelte` so that it o
 </style>
 ```
 
-Alternatively, we could use the `:global` modifier inside `Card.svelte` to target all `small` elements inside `.card`:
+Alternativamente, poderíamos usar o modificador `:global` dentro do `Card.svelte` para atingir todos elementos `small` dentro do `.card`:
 
 ```svelte
 /// file: Card.svelte
