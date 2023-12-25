@@ -1,12 +1,12 @@
 ---
-title: Slot props
+title: Propriedades da Ranhura
 ---
 
-Components can pass data _back_ to their slotted content via _slot props_. In this app, we have a list of named CSS colours. Typing into the `<input>` will filter the list.
+O componente pode passar dados _de volta_ ao seu conteúdo ranhurado através das _propriedades da ranhura_. Nesta aplicação, temos uma lista de cores de CSS nomeadas. Digitar no `<input>` filtrará a lista.
 
-Right now every row is showing `AliceBlue`, and as lovely a colour as it is, that's not what we want.
+Neste momento, cada linha está exibindo `AliceBlue`, e por muito bonita que seja a cor, não é o que queremos.
 
-Open `FilterableList.svelte`. The `<slot>` is being rendered for each filtered item in the list. Pass the data into the slot:
+Abrimos `FilterableList.svelte`. A `<slot>` está sendo interpretado para cada item filtrado na lista. Passamos o dado à ranhura:
 
 ```svelte
 /// file: FilterableList.svelte
@@ -17,9 +17,9 @@ Open `FilterableList.svelte`. The `<slot>` is being rendered for each filtered i
 </div>
 ```
 
-(As in other contexts, `{item}` is shorthand for `item={item}`.)
+(Tal como noutros contextos, `{item}` é abreviação para `item={item}`.)
 
-Then, on the other side, expose the data to the slotted content with the `let:` directive:
+Depois, noutro lado, expomos os dados ao conteúdo ranhurado com a diretiva `let:`:
 
 ```svelte
 /// file: App.svelte
@@ -38,7 +38,7 @@ Then, on the other side, expose the data to the slotted content with the `let:` 
 </FilterableList>
 ```
 
-Finally, get rid of the placeholder variable, which we no longer need:
+Finalmente, livramos-nos da variável marcadora de posição, que já não precisamos:
 
 ```svelte
 /// file: App.svelte
@@ -50,4 +50,4 @@ Finally, get rid of the placeholder variable, which we no longer need:
 </script>
 ```
 
-> Named slots can also have props; use the `let` directive on an element with a `slot="..."` attribute, instead of on the component itself.
+> As ranhuras nomeadas também podem ter propriedades; usamos a diretiva `let` sobre um elemento com um atributo `slot="..."`, ao invés do próprio componente.
