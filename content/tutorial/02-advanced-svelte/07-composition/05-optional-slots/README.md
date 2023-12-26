@@ -1,8 +1,8 @@
 ---
-title: Checking for slot content
+title: Verificando o Conteúdo da Ranhura
 ---
 
-In some cases, you may want to control parts of your component based on whether slotted content was passed in. For example, if we remove the `<header>` from `App.svelte`...
+Em alguns casos, podemos querer controlar as partes do nosso componente baseado no fato de ter sido passado conteúdo ranhurado. Por exemplo, se removermos o `<header>` do `App.svelte`...
 
 ```svelte
 /// file: App.svelte
@@ -23,9 +23,9 @@ In some cases, you may want to control parts of your component based on whether 
 </div>
 ```
 
-...we're left with an ugly double border because `FilterableList.svelte` is still rendering the `<div class="header">`.
+...ficamos com uma borda dupla feita porque `FilterableList.svelte` ainda está interpretando o `<div class="header">`.
 
-We can fix that by using the special `$$slots` variable in `FilterableList.svelte`:
+Nós podemos corrigir isto usando a variável `$$slots` especial no `FilterableList.svelte`:
 
 ```svelte
 /// file: FilterableList.svelte
