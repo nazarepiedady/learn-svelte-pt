@@ -1,5 +1,5 @@
 ---
-title: Atualização de Vetores e Objetos
+title: Atualizando Vetores e Objetos
 ---
 
 Uma vez que a reatividade da Svelte é acionada por atribuições, usar métodos de vetor tais como `push` e `splice` não causará automaticamente atualizações. Por exemplo, o clique sobre o botão 'Add a number' atualmente não faz nada, apesar de estarmos a chamar `numbers.push(...)` dentro da função `addNumber`.
@@ -38,8 +38,9 @@ Uma simples regra de ouro: o nome da variável atualizada deve aparecer à esque
 
 ```js
 /// no-file
+const obj = { foo: { bar: 1 } };
 const foo = obj.foo;
-foo.bar = 'baz';
+foo.bar = 2;
 ```
 
 ...não acionará a reatividade sobre a `obj.foo.bar`, a menos que a sigamos de perto com `obj = obj`.
