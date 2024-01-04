@@ -10,7 +10,7 @@
 		A interpretação do lado do servidor falhou com o código de estado de HTTP
 		<a
 			target="_blank"
-			href="https://httpstatusdogs.com/{$page.status}"
+			href="https://http.dog/{$page.status}"
 			>{$page.status}</a
 		>
 	</p>
