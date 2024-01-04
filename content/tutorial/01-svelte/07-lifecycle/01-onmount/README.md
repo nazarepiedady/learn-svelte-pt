@@ -4,7 +4,7 @@ title: onMount
 
 Todo componente tem um _ciclo de vida_ que começa quando for criado, e termina quando for destruído. Existem um punhado de funções que permitem-nos executar código em momentos chaves durante este ciclo de vida. Aquela que usaremos com mais frequência é `onMount`, que executa depois do componente ser desenhado primeiro no DOM.
 
-Neste exercício, teremos um `<canvas>` que gostaríamos de animar, usando a função `paint` no `gradient.js`. Começamos importando a função a partir da `svelte`:
+Neste exercício, teremos um `<canvas>` que gostaríamos de animar, usando a função `paint` no `gradient.js`. Começamos importando a função `onMount` a partir da `svelte`:
 
 ```svelte
 /// file: App.svelte
@@ -14,7 +14,7 @@ Neste exercício, teremos um `<canvas>` que gostaríamos de animar, usando a fun
 </script>
 ```
 
-Depois, adicionamos uma função que executa quando componente montar:
+Depois, adicionamos uma função de resposta que executa quando componente montar:
 
 ```svelte
 /// file: App.svelte
