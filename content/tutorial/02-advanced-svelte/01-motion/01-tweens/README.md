@@ -6,7 +6,7 @@ Agora que cobrimos os fundamentos, é hora de aprender algumas técnicas avança
 
 Definir valores e assistir o DOM atualizar-se automaticamente é fantástico. Sabes o que é mais fantástico? Intercalar estes valores. A Svelte inclui ferramentas para ajudar-nos a construir interfaces astutas que usam animação para comunicar mudanças.
 
-Vamos começar mudando a memória `progress` para um valor `tweened`:
+Vamos começar mudando a memória `progress` para uma memória `tweened`:
 
 ```svelte
 /// file: App.svelte
