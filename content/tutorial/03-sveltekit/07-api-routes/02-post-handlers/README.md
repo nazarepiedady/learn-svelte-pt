@@ -12,20 +12,20 @@ Inside the `keydown` event handler of the 'add a todo' `<input>`, let's post som
 	type="text"
 	autocomplete="off"
 	on:keydown={async (e) => {
-		if (e.key === 'Enter') {
-			const input = e.currentTarget;
-			const description = input.value;
+		if (e.key !== 'Enter') return;
 
-+++			const response = await fetch('/todo', {
-				method: 'POST',
-				body: JSON.stringify({ description }),
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			});+++
+		const input = e.currentTarget;
+		const description = input.value;
 
-			input.value = '';
-		}
++++		const response = await fetch('/todo', {
+			method: 'POST',
+			body: JSON.stringify({ description }),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});+++
+
+		input.value = '';
 	}}
 />
 ```
@@ -51,7 +51,7 @@ export async function POST({ request, cookies }) {
 
 As with `load` functions and form actions, the `request` is a standard [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) object; `await request.json()` returns the data that we posted from the event handler.
 
-We're returning a response with a [201 Created](https://httpstatusdogs.com/201-created) status and the `id` of the newly generated todo in our database. Back in the event handler, we can use this to update the page:
+We're returning a response with a [201 Created](https://http.dog/201) status and the `id` of the newly generated todo in our database. Back in the event handler, we can use this to update the page:
 
 ```svelte
 /// file: src/routes/+page.svelte
@@ -59,27 +59,27 @@ We're returning a response with a [201 Created](https://httpstatusdogs.com/201-c
 	type="text"
 	autocomplete="off"
 	on:keydown={async (e) => {
-		if (e.key === 'Enter') {
-			const input = e.currentTarget;
-			const description = input.value;
+		if (e.key !== 'Enter') return;
 
-			const response = await fetch('/todo', {
-				method: 'POST',
-				body: JSON.stringify({ description }),
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			});
+		const input = e.currentTarget;
+		const description = input.value;
 
-+++			const { id } = await response.json();
+		const response = await fetch('/todo', {
+			method: 'POST',
+			body: JSON.stringify({ description }),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
 
-			data.todos = [...data.todos, {
-				id,
-				description
-			}];+++
++++		const { id } = await response.json();
 
-			input.value = '';
-		}
+		data.todos = [...data.todos, {
+			id,
+			description
+		}];+++
+
+		input.value = '';
 	}}
 />
 ```
