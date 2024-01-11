@@ -1,5 +1,5 @@
 {
-	"title": "API do Contexto",
+	"title": "API de Contexto",
 	"scope": {
 		"prefix": "/src/lib/",
 		"name": "src"
