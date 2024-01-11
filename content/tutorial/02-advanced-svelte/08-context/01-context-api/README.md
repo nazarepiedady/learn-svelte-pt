@@ -1,10 +1,10 @@
 ---
-title: setContext and getContext
+title: setContext e getContext
 ---
 
-The context API provides a mechanism for components to 'talk' to each other without passing around data and functions as props, or dispatching lots of events. It's an advanced feature, but a useful one. In this exercise, we're going to recreate [Schotter](https://collections.vam.ac.uk/item/O221321/schotter-print-nees-georg/) by George Nees — one of the pioneers of generative art — using the context API.
+A API de contexto fornece um mecanismo para os componentes 'falarem' uns com os outros sem passarem dados e funções como propriedades, ou despacharem muitos eventos. É uma funcionalidade avançada, mas útil. Neste exercício, iremos recriar a [Schotter](https://collections.vam.ac.uk/item/O221321/schotter-print-nees-georg/) by George Nees — um dos pioneiros da arte generativa — usando a API de contexto.
 
-Inside `Canvas.svelte`, there's an `addItem` function that adds an item to the canvas. We can make it available to components inside `<Canvas>`, like `<Square>`, with `setContext`:
+Dentro do `Canvas.svelte`, existe uma função `addItem` que adiciona um item à tela. Nós podemos torná-la disponível aos componentes dentro do `<Canvas>`, como `<Square>`, com a `setContext`:
 
 ```svelte
 /// file: Canvas.svelte
@@ -27,7 +27,7 @@ Inside `Canvas.svelte`, there's an `addItem` function that adds an item to the c
 </script>
 ```
 
-Inside child components, we can now get the context with, well, `getContext`:
+Dentro dos componentes filhos, podemos agora receber obter o contexto com, bem, a `getContext`:
 
 ```svelte
 /// file: Square.svelte
@@ -45,7 +45,7 @@ Inside child components, we can now get the context with, well, `getContext`:
 </script>
 ```
 
-So far, so... boring. Let's add some randomness to the grid:
+Até agora, tão... aborrecido. Vamos adicionar alguma aleatoriedade à grade:
 
 ```svelte
 /// file: App.svelte
@@ -65,13 +65,13 @@ So far, so... boring. Let's add some randomness to the grid:
 </div>
 ```
 
-Like [lifecycle functions](/tutorial/onmount), `setContext` and `getContext` must be called during component initialisation. (The context key (`'canvas'` in this case) can be anything you like, including non-strings, which is useful for controlling who can access the context.)
+Tal como [funções gatilhos do ciclo de vida](/tutorial/onmount), `setContext` e `getContext` devem ser chamadas durante a inicialização do componente. (A chave do contexto (`'canvas'` neste caso) pode ser qualquer coisa que quisermos, incluindo valores que não são sequências de caracteres, o que é útil para controlar quem pode acessar o contexto).
 
-Your context object can include anything, including stores. This allows you to pass values that change over time to child components:
+O nosso objeto de contexto pode incluir qualquer coisa, incluindo memórias. Isto permite-nos passar valores que mudam ao longo do tempo aos componentes filhos:
 
 ```js
 /// no-file
-// in a parent component
+// num componente pai
 import { setContext } from 'svelte';
 import { writable } from 'svelte/store';
 
@@ -81,7 +81,7 @@ setContext('my-context', {
 ```
 ```js
 /// no-file
-// in a child component
+// num componente filho
 import { getContext } from 'svelte';
 
 const { count } = getContext('my-context');
