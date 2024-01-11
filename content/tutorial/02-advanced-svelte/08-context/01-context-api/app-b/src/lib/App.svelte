@@ -2,7 +2,8 @@
 	import Canvas from './Canvas.svelte';
 	import Square from './Square.svelte';
 
-	// we use a seeded random number generator to get consistent jitter
+	// usamos um gerador de números aleatórios semeados
+	// para obtermos um ruído consistente
 	let seed = 1;
 
 	function random() {
