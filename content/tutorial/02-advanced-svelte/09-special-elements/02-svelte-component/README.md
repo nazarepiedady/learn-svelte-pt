@@ -2,9 +2,9 @@
 title: <svelte:component>
 ---
 
-A component can change its type altogether with `<svelte:component>`. In this exercise, we want to show `RedThing.svelte` if the `color` is `red`, `GreenThing.svelte` if it's `green`, and so on.
+Um componente pode mudar o seu tipo completamente com o `<svelte:component>`. Neste exercício, queremos mostrar `RedThing.svelte` se a `color` for `red`, `GreenThing.svelte` se for `green`, e assim por diante.
 
-We _could_ do this with a sequence of `if` blocks...
+Nós _poderíamos_ fazer isto com uma sequência de blocos de `if`...
 
 ```svelte
 /// file: App.svelte
@@ -17,7 +17,7 @@ We _could_ do this with a sequence of `if` blocks...
 {/if}
 ```
 
-...but it's a little cumbersome. Instead, we can create a single dynamic component:
+...mas é um pouco complexo. Ao invés disto, podemos criar um único componente dinâmico:
 
 ```svelte
 /// file: App.svelte
@@ -30,4 +30,4 @@ We _could_ do this with a sequence of `if` blocks...
 +++<svelte:component this={selected.component}/>+++
 ```
 
-The `this` value can be any component constructor, or a falsy value — if it's falsy, no component is rendered.
+O valor da `this` pode ser qualquer construtor de componente, ou um valor falso — se for falso, nenhum componente é interpretado.
