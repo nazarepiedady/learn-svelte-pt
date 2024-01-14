@@ -2,13 +2,13 @@
 title: <svelte:document>
 ---
 
-The `<svelte:document>` element allows you to listen for events that fire on `document`. This is useful with events like `selectionchange`, which doesn't fire on `window`.
+O elemento `<svelte:document>` permite-nos ouvir os eventos que disparam sobre o `document`. Isto é útil para com os eventos como `selectionchange`, os quais não disparam sobre a `window`.
 
-Add the `selectionchange` handler to the `<svelte:document>` tag:
+Adicionamos o manipulador de `selectionchange` ao marcador `<svelte:document>`:
 
 ```svelte
 /// file: App.svelte
 <svelte:document +++on:selectionchange={handleSelectionChange}+++ />
 ```
 
-> Avoid `mouseenter` and `mouseleave` handlers on this element, as these events are not fired on `document` in all browsers. Use `<svelte:body>` instead.
+> Nós devemos evitar os manipuladores de `mouseenter` e `mouseleave` sobre este elemento, uma vez que estes eventos não são disparados sobre `document` em todos os navegadores. Nós usamos `<svelte:body>`.
