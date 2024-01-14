@@ -2,13 +2,13 @@
 title: <svelte:window>
 ---
 
-Just as you can add event listeners to any DOM element, you can add event listeners to the `window` object with `<svelte:window>`.
+Tal como podemos adicionar ouvintes de evento a qualquer elemento do DOM, podemos adicionar ouvintes de evento ao objeto `window` com `<svelte:window>`.
 
-We've already got a `handleKeydown` function declared — now all we need to do is add a `keydown` listener:
+Já temos uma função `handleKeydown` declarada — agora tudo que precisamos fazer é adicionar um ouvinte de `keydown`:
 
 ```svelte
 /// file: App.svelte
 <svelte:window +++on:keydown={handleKeydown}+++ />
 ```
 
-> As with DOM elements, you can add [event modifiers](/tutorial/event-modifiers) like `preventDefault`.
+> Tal como acontece com os elementos do DOM, podemos adicionar [modificadores de evento](/tutorial/event-modifiers) como `preventDefault`.
