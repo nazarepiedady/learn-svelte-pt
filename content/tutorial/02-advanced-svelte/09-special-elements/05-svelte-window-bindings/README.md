@@ -1,15 +1,15 @@
 ---
-title: <svelte:window> bindings
+title: Vínculos de <svelte:window>
 ---
 
-We can also bind to certain properties of `window`, such as `scrollY`:
+Nós também podemos vincular às certas propriedades do `window`, tais como `scrollY`:
 
 ```svelte
 /// file: App.svelte
 <svelte:window +++bind:scrollY={y}+++ />
 ```
 
-The list of properties you can bind to is as follows:
+A lista de propriedades que às quais podemos vincular é como se segue:
 
 - `innerWidth`
 - `innerHeight`
@@ -17,6 +17,6 @@ The list of properties you can bind to is as follows:
 - `outerHeight`
 - `scrollX`
 - `scrollY`
-- `online` — an alias for `window.navigator.onLine`
+- `online` — um pseudónimo a `window.navigator.onLine`
 
-All except `scrollX` and `scrollY` are readonly.
+Todas exceto `scrollX` e `scrollY` são exclusivas para leitura.
