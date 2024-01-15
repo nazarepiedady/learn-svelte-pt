@@ -2,30 +2,30 @@
 title: <svelte:options>
 ---
 
-The `<svelte:options>` element allows you to specify compiler options.
+O elemento `<svelte:options>` permite-nos especificar opções do compilador.
 
-We'll use the `immutable` option as an example. In this app, the `<Todo>` component flashes whenever it receives new data. Clicking on one of the items toggles its `done` state by creating an updated `todos` array. This causes the _other_ `<Todo>` items to flash, even though they don't end up making any changes to the DOM.
+Nós usaremos a opção `immutable` como exemplo. Nesta aplicação, o componente `<Todo>` pisca sempre que este receber novo dado. Clicar sobre um dos itens alterna o seu estado `done` criando um vetor de `todos` atualizado. Isto faz os _outros_ itens `<Todo>` piscarem, mesmo se não terminarem fazendo quaisquer mudanças ao DOM.
 
-We can optimise this by telling the `<Todo>` component to expect _immutable_ data. This means that we're promising never to _mutate_ the `todo` prop, but will instead create new todo objects whenever things change.
+Nós podemos otimizar isto dizendo ao componente `<Todo>` esperar dados _imutáveis_. Isto significa que prometemos nunca _alterar_ a propriedade `todo`, mas ao invés disto criaremos novos objetos de afazeres sempre que as coisas mudarem.
 
-Add this to the top of `Todo.svelte`:
+Adicionamos isto no princípio do `Todo.svelte`:
 
 ```svelte
 /// file: Todo.svelte
 <svelte:options immutable={true} />
 ```
 
-> You can shorten this to `<svelte:options immutable/>` if you prefer.
+> Nós podemos encurtar isto a `<svelte:options immutable/>` se preferirmos.
 
-Now, when you toggle todos by clicking on them, only the updated component flashes.
+Agora, quando alternamos os afazeres clicando sobre os mesmos, apenas o componente atualizado pisca.
 
-The options that can be set here are:
+As opções que podem ser definidos estão listados abaixo:
 
-- `immutable={true}` — you never use mutable data, so the compiler can do simple referential equality checks to determine if values have changed
-- `immutable={false}` — the default. Svelte will be more conservative about whether or not mutable objects have changed
-- `accessors={true}` — adds getters and setters for the component's props
-- `accessors={false}` — the default
-- `namespace="..."` — the namespace where this component will be used, most commonly `"svg"`
-- `customElement="..."` — the name to use when compiling this component as a custom element
+- `immutable={true}` — nunca usamos dados mutáveis, então o compilador pode fazer verificações de igualdade referencial simples para determinar se os valores tiverem mudado
+- `immutable={false}` — o padrão. A Svelte será mais conservadora sobre se ou não os objetos mutáveis mudaram.
+- `accessors={true}` — adiciona recuperadores e definidores para as propriedades do componente
+- `accessors={false}` — o padrão
+- `namespace="..."` — o espaço de nome onde este componente será usado, mais comummente `"svg"`
+- `customElement="..."` — o nome a usar quando compilamos este componente como um elemento personalizado
 
-Consult the [API reference](https://svelte.dev/docs) for more information on these options.
+Consultar a [referência da API](https://svelte-docs-pt.vercel.app/docs) por mais informação sobre estas opções.
