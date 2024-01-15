@@ -10,7 +10,7 @@
 	function toggle(toggled) {
 		todos = todos.map((todo) => {
 			if (todo === toggled) {
-				// return a new object
+				// retornar um novo objeto
 				return {
 					id: todo.id,
 					text: todo.text,
@@ -18,7 +18,7 @@
 				};
 			}
 
-			// return the same object
+			// retornar o mesmo objeto
 			return todo;
 		});
 	}
