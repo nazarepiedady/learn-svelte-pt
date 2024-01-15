@@ -13,8 +13,8 @@
 	});
 </script>
 
-<!-- the text will flash red whenever
-     the `todo` object changes -->
+<!-- o texto piscará vermelho sempre
+		 que o objeto `todo` mudar -->
 <li bind:this={element}>
 	<label>
 		<input type="checkbox" checked={todo.done} on:change />
