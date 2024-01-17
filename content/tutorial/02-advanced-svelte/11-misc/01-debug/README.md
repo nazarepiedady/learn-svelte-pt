@@ -1,10 +1,10 @@
 ---
-title: The @debug tag
+title: O Marcador @debug
 ---
 
-Occasionally, it's useful to inspect a piece of data as it flows through your app.
+Ocasionalmente, é útil inspecionar um pedaço de dado conforme flui através da nossa aplicação.
 
-One approach is to use `console.log(...)` inside your markup. If you want to pause execution, though, you can use the `{@debug ...}` tag with a comma-separated list of values you want to inspect:
+Uma abordagem é usar `console.log(...)` dentro da nossa marcação. Entretanto, se quisermos pausar a execução, podemos usar o marcador `{@debug ...}` com uma lista separada por vírgula de valores que quisermos inspecionar:
 
 ```svelte
 /// file: App.svelte
@@ -13,4 +13,4 @@ One approach is to use `console.log(...)` inside your markup. If you want to pau
 <h1>Hello {user.firstname}!</h1>
 ```
 
-If you now open your devtools and start interacting with the `<input>` elements, you'll trigger the debugger as the value of `user` changes. (Note that the call stack and local variables will be hidden in this tutorial, because of iframe security restrictions.)
+Se abrirmos agora as nossas ferramentas de programação e começarmos a inspecionar com os elementos `<input>`, acionaremos o depurador a medida que o valor da `user` mudar. (Nota que a pilha de chamada e as variáveis locais serão escondidas neste tutorial, por causa das restrições de segurança do `iframe`).
