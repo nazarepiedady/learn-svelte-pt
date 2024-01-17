@@ -1,12 +1,12 @@
 ---
-title: Sharing code
+title: Partilhando Código
 ---
 
-In all the examples we've seen so far, the `<script>` block contains code that runs when each component instance is initialised. For the vast majority of components, that's all you'll ever need.
+Em todos os exemplos que vimos, o bloco `<script>` contém o código que executa-se quando a instância de cada componente for inicializada. Para a vasta maioria dos componentes, é tudo que alguma vez precisaremos.
 
-Very occasionally, you'll need to run some code outside of an individual component instance. For example: returning to our custom audio player from a [previous exercise](media-elements), you can play all four tracks simultaneously. It would be better if playing one stopped all the others.
+Muito ocasionalmente, precisaremos executar algum código fora da instância dum componente individual. Por exemplo: retornando ao nosso reprodutor de áudio personalizado dum [exercício anterior](media-elements), podemos reproduzir todas as quatro faixas simultaneamente. Seria melhor se ao reproduzirmos uma parássemos todas as outras.
 
-We can do that by declaring a `<script context="module">` block. Code contained inside it will run once, when the module first evaluates, rather than when a component is instantiated. Place this at the top of `AudioPlayer.svelte` (note that this is a _separate_ script tag):
+Nós podemos fazer isto declarando um bloco `<script context="module">`. O código contido dentro deste executar-se-á uma vez, quando o módulo avaliar-se primeiro, ao invés de quando um componente for instanciado. Colocamos isto no princípio do `AudioPlayer.svelte` (nota que isto é um marcador de programa _separado_):
 
 ```svelte
 /// file: AudioPlayer.svelte
@@ -15,7 +15,7 @@ We can do that by declaring a `<script context="module">` block. Code contained 
 </script>+++
 ```
 
-It's now possible for the components to 'talk' to each other without any state management:
+É possível agora para os componentes 'falarem' uns aos outros sem nenhuma gestão de estado:
 
 ```svelte
 /// file: AudioPlayer.svelte
