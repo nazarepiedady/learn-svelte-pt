@@ -1,8 +1,8 @@
 ---
-title: Exports
+title: Exportações
 ---
 
-Anything exported from a `context="module"` script block becomes an export from the module itself. Let's export a `stopAll` function:
+Qualquer coisa exportada partir dum bloco de programa `context="module"` torna-se uma exportação a partir do próprio módulo. Vamos exportar uma função `stopAll`:
 
 ```svelte
 /// file: AudioPlayer.svelte
@@ -15,7 +15,7 @@ Anything exported from a `context="module"` script block becomes an export from 
 </script>
 ```
 
-We can now import `stopAll` in `App.svelte`...
+Nós podemos agora importar `stopAll` no `App.svelte`...
 
 ```svelte
 /// file: App.svelte
@@ -24,7 +24,7 @@ We can now import `stopAll` in `App.svelte`...
 </script>
 ```
 
-...and use it in an event handler:
+...e usá-la num manipulador de evento:
 
 ```svelte
 /// file: App.svelte
@@ -39,4 +39,4 @@ We can now import `stopAll` in `App.svelte`...
 </div>
 ```
 
-> You can't have a default export, because the component _is_ the default export.
+> Nós não podemos ter uma exportação padrão, porque o componente _é_ a exportação padrão.
