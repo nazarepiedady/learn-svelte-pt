@@ -3,12 +3,11 @@
 </script>
 
 {#if $page.status === 404}
-	<h1>Not found</h1>
-	<p><a href="/">Go to /</a></p>
+	<h1>Não encontrada</h1>
+	<p><a href="/">Seguir a /</a></p>
 {:else}
 	<p>
-		Server-side rendering failed with HTTP status
-		code
+		Interpretação do lado do servidor falhada com o código de estado de HTTP
 		<a
 			target="_blank"
 			href="https://http.dog/{$page.status}"
